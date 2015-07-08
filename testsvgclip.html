@@ -1,0 +1,113 @@
+<html>
+<head>
+
+</head>
+<body>
+    <script>
+var svgns = "http://www.w3.org/2000/svg";
+
+function createSvg(){
+  document.body.innerHTML = '<svg id="mySvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="400" height="400"></svg>'  
+}
+
+function createEl(tagName){
+  return document.createElementNS(svgns,tagName);
+}
+
+function createClipPath(id){
+  var el = createEl('clipPath');
+  el.setAttribute('id',id);
+  var circle = createEl('circle');
+  circle.setAttribute('cx',200);
+  circle.setAttribute('cy',200);
+  circle.setAttribute('r',200);
+  el.appendChild(circle);
+  return el;
+}
+
+function createRect(id){
+  var el = createEl('g');
+  el.setAttribute('id',id);
+  var rect=createEl('rect');
+  rect.setAttribute('x',Math.floor(Math.random()*380));
+  rect.setAttribute('y',Math.floor(Math.random()*380));
+  rect.setAttribute('width',40);
+  rect.setAttribute('height',40);
+  rect.setAttribute('stroke','black')
+  rect.setAttribute('fill','red');
+  el.appendChild(rect);
+  return el;
+}
+function clip(el,clipId){
+   el.setAttribute('clip-path','url(#' + clipId + ')')
+}
+
+// function addClippedPair(){
+//   var clipPath = createClipPath('my-clip');
+//   var clipped = createRect('my-rect','my-clip');
+//   clip(clipped,'my-clip')
+//   var svg = document.getElementById('mySvg');
+//   svg.appendChild(clipPath);
+//   svg.appendChild(clipped);
+//   return {
+//     clipPath:clipPath,
+//     clipped:clipped
+//   }
+// }
+
+
+var clippedEachLoop = 1000;
+var loopMax = 10000;
+var sampleEvery = 100;
+var accumulated = 0;
+var samples=[];
+createSvg();
+var svg = document.getElementById('mySvg');
+
+function clearTagType(tagName){
+  var groups = document.getElementsByTagName(tagName);
+  // console.log(groups.length);
+  for (var i=groups.length-1;i>-1;i--){
+    var group = groups[i];
+    // console.log('removing',i,group)
+    group.parentNode.removeChild(group);
+  }
+}
+function build(){
+  var clipPath = createClipPath('my-clip');
+  svg.appendChild(clipPath);
+  for (var j=0;j<clippedEachLoop;j++){
+    var rect = createRect('rect-'+j);
+    clip(rect,'my-clip');
+    svg.appendChild(rect);
+  }
+}
+function clear(){
+  clearTagType('clipPath'); 
+  clearTagType('g');
+}
+
+var i = 0;
+var intervalId = setInterval(function(){
+  var startTime = Date.now();
+  clear();
+  var endTime = Date.now();
+  i++;
+  accumulated += endTime-startTime;
+  if (i % sampleEvery === 0){
+    console.log(i, accumulated/sampleEvery, 'ms');
+    samples.push(accumulated/sampleEvery);
+    accumulated = 0;
+  }
+  build();
+  if (i>=loopMax){
+    console.log('DONE!');
+    console.log(samples);
+    clearInterval(intervalId);
+  }
+},45);
+
+
+</script>
+</body>
+</html>
