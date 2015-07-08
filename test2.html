@@ -36,8 +36,8 @@
 					<g data-id="186ebc97-1e2c-4d5c-934a-0a05329a7449" transform="translate(140,225)"
 					   class="widget widget-button widget-state-disabled" opacity="undefined">↵
 						<g class="widget-body">↵
-							<rect data-widget-id="186ebc97-1e2c-4d5c-934a-0a05329a7449" x="0" y="0" width="300"
-							      height="265" fill="lightgray" stroke="black" rx="0" ry="0">↵
+							<rect data-widget-id="186ebc97-1e2c-4d5c-934a-0a05329a7449" x="0" y="0" width="300" height="265"
+							      fill="lightgray" stroke="black" rx="0" ry="0">↵
 							</rect>
 							↵
 							<clipPath id="clip-thumb-drawtext-9541">↵
@@ -77,16 +77,14 @@
 										<g style="font-family:'Open Sans';stroke:none;fill:black" class="p-text">↵
 											<g class="md-paragraph">↵
 												<g transform="translate(15.400000000000002,24)"
-												   style="font-size:28;dominant-baseline:hanging" class="markdown-line">
-													↵
+												   style="font-size:28;dominant-baseline:hanging" class="markdown-line">↵
 													<text style="dominant-baseline:hanging;" x="0">↵ A Header</text>
 												</g>
 											</g>
 											↵
 											<g class="md-paragraph">↵
 												<g transform="translate(15.400000000000002,66)"
-												   style="font-size:14;dominant-baseline:hanging" class="markdown-line">
-													↵
+												   style="font-size:14;dominant-baseline:hanging" class="markdown-line">↵
 													<text style="dominant-baseline:hanging;" x="0">↵ You can</text>
 													↵
 													<text style="dominant-baseline:hanging;font-style:italic;"
@@ -97,40 +95,33 @@
 												</g>
 												↵
 												<g transform="translate(15.400000000000002,85.6)"
-												   style="font-size:14;dominant-baseline:hanging" class="markdown-line">
-													↵
-													<text style="dominant-baseline:hanging;" x="0">↵ like this, or
-													</text>
+												   style="font-size:14;dominant-baseline:hanging" class="markdown-line">↵
+													<text style="dominant-baseline:hanging;" x="0">↵ like this, or</text>
 													↵
 													<text style="dominant-baseline:hanging;font-weight:bold;"
 													      x="74.2724609375">↵ bold
 													</text>
 													↵
-													<text style="dominant-baseline:hanging;" x="108.568359375">↵ like
-													</text>
+													<text style="dominant-baseline:hanging;" x="108.568359375">↵ like</text>
 												</g>
 												↵
 												<g transform="translate(15.400000000000002,105.19999999999999)"
-												   style="font-size:14;dominant-baseline:hanging" class="markdown-line">
-													↵
+												   style="font-size:14;dominant-baseline:hanging" class="markdown-line">↵
 													<text style="dominant-baseline:hanging;" x="0">↵ that.</text>
 												</g>
 											</g>
 											↵
 											<g class="md-paragraph">↵
 												<g transform="translate(15.400000000000002,127.59999999999998)"
-												   style="font-size:14;dominant-baseline:hanging" class="markdown-line">
-													↵
-													<text style="dominant-baseline:hanging;" x="0">↵ Use a blank line
-														for a
+												   style="font-size:14;dominant-baseline:hanging" class="markdown-line">↵
+													<text style="dominant-baseline:hanging;" x="0">↵ Use a blank line for
+														a
 													</text>
 												</g>
 												↵
 												<g transform="translate(15.400000000000002,147.2)"
-												   style="font-size:14;dominant-baseline:hanging" class="markdown-line">
-													↵
-													<text style="dominant-baseline:hanging;" x="0">↵ new paragraph.
-													</text>
+												   style="font-size:14;dominant-baseline:hanging" class="markdown-line">↵
+													<text style="dominant-baseline:hanging;" x="0">↵ new paragraph.</text>
 												</g>
 											</g>
 											↵
@@ -156,8 +147,8 @@
 														<g transform="translate(43.400000000000006,217.72)"
 														   style="font-size:14;dominant-baseline:hanging"
 														   class="markdown-line">↵
-															<text style="dominant-baseline:hanging;" x="0">↵ First item
-																in a
+															<text style="dominant-baseline:hanging;" x="0">↵ First item in
+																a
 															</text>
 															↵
 															<text style="dominant-baseline:hanging;font-weight:bold;"
@@ -334,58 +325,75 @@
 	var sampleEvery = 20;
 	var accumulated = 0;
 	var samples = [];
-	var myFrame =document.getElementById('my-frame');
+	var frameTemplate =document.getElementById('my-frame');
 
 	document.body.innerHTML = '<svg id="mySvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%"></svg>'
 
 
 	var svg = document.getElementById('mySvg');
 
-	function createEl(tagName){
-		return document.createElementNS(svgns,tagName);
-	}
-	function createFrame(){
-		var frame = myFrame.cloneNode(true);
-		var holder = createEl('g');
-		holder.appendChild(frame);
-		return holder;
-	}
-
-	function build() {
-		for (var j = 0; j < clippedEachLoop; j++) {
-			var frame=createFrame();
-			frame.setAttribute('id','frame-'+j);
-			frame.setAttribute('transform','translate(' + j*50 + ') scale(0.05)');
-			svg.appendChild(frame);
-		}
-	}
-	function clear() {
-		for (var j = 0; j < clippedEachLoop; j++) {
-			var frame=document.getElementById('frame-'+j);
-			if (!frame)return;
-			frame.parentNode.removeChild(frame);
-		}
-	}
+	buildFrameRoots();
 
 	var i = 0;
 	var intervalId = setInterval(function () {
-		var startTime = Date.now();
-		clear();
-		var endTime = Date.now();
+		//update all the frames by clearing and setting them...
+		for (var j=0;j<clippedEachLoop;j++){
+			var startTime = Date.now();
+			clearFrame(j);
+			var endTime = Date.now();
+			accumulated += endTime - startTime;
+			setFrame(j);
+		}
 		i++;
-		accumulated += endTime - startTime;
+
+
 		if (i % sampleEvery === 0) {
 			console.log(i, accumulated / sampleEvery, 'ms');
 			samples.push(accumulated / sampleEvery);
 			accumulated = 0;
 		}
-		build();
 		if (i >= loopMax) {
 			console.log('DONE!');
 			console.log(samples);
 			clearInterval(intervalId);
 		}
 	}, 45);
+
+	function setFrame(j){
+		var frame=document.getElementById('frame-'+j);
+		if (!frame)return;
+		var frameBase = frameTemplate.cloneNode(true);
+		var frameBaseContent = frameBase.lastChild;
+//		console.log(frameBaseContent);
+		frame.firstChild.appendChild(frameBaseContent);
+	}
+	function clearFrame(j) {
+		var frame=document.getElementById('frame-'+j);
+		if (!frame)return;
+		if (!frame.lastChild) return;
+		if (!frame.lastChild.lastChild) return;
+		var child = frame.lastChild.lastChild; //holding-group - svg element - device element
+//		console.log(child);
+		child.parentNode.removeChild(child);
+	}
+
+	function createEl(tagName){
+		return document.createElementNS(svgns,tagName);
+	}
+
+	//one time
+	function buildFrameRoots() {
+		for (var j = 0; j < clippedEachLoop; j++) {
+			var frame=frameTemplate.cloneNode();
+			var holder = createEl('g');
+			holder.appendChild(frame);
+			holder.setAttribute('id','frame-'+j);
+			holder.setAttribute('transform','translate(' + j*50 + ') scale(0.05)');
+			svg.appendChild(holder);
+		}
+	}
+
+
 
 
 </script>
