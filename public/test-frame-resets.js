@@ -1,6 +1,6 @@
 var svgns = "http://www.w3.org/2000/svg";
-var clippedEachLoop = 50;
-var loopMax = 1000;
+var framesInStory = 50;
+var numberOfUpdates = 1000;
 var sampleEvery = 20;
 var accumulated = 0;
 var samples = [];
@@ -18,7 +18,7 @@ buildFrameHolders();
 var i = 0;
 var intervalId = setInterval(function () {
     //update all the frames by clearing and setting them...
-    for (var j=0;j<clippedEachLoop;j++){
+    for (var j=0;j<framesInStory;j++){
         var startTime = Date.now();
         clearFrame(j);
         var endTime = Date.now();
@@ -33,7 +33,7 @@ var intervalId = setInterval(function () {
         samples.push(accumulated / sampleEvery);
         accumulated = 0;
     }
-    if (i >= loopMax) {
+    if (i >= numberOfUpdates) {
         console.log('DONE!');
         console.log(samples);
         clearInterval(intervalId);
@@ -41,7 +41,7 @@ var intervalId = setInterval(function () {
 }, 45);
 
 function generateDeviceNode(){
-    return document.importNode(frameTemplate.content,true);
+    return document.importNode(frameTemplate.content,true).querySelector('.widget-device');
 }
 
 function setFrame(j){
@@ -61,12 +61,12 @@ function clearFrame(j) {
 
 //one time
 function buildFrameHolders() {
-    for (var j = 0; j < clippedEachLoop; j++) {
+    for (var j = 0; j < framesInStory; j++) {
         //apparently we are supposed to write to template first? weird...
         var t = frameHolderTemplate.content;
-        t.querySelector('.frame-thumbnail').setAttribute('id','frame-'+j);
+        t.querySelector('.frame-thumbnail').id='frame-'+j;
         t.querySelector('.frame-body').setAttribute('transform','translate(' + j*80 + ',0)');
         var holderNode = document.importNode(t,true);
-        frameThumbnails.appendChild(holderNode);
+        frameThumbnails.appendChild(holderNode.querySelector('.frame-thumbnail'));
     }
 }
