@@ -4,6 +4,7 @@ var numberOfUpdates = 10;
 var sampleEvery = 1;
 var accumulated = 0;
 var samples = [];
+var removeClipping = false;
 
 var frameHolderTemplate=document.getElementById('frame-holder-template');
 var frameTemplate =document.getElementById('frame-template');
@@ -17,7 +18,11 @@ var clippedById = _.groupBy(clipped,function(el){
 
 console.log(clipPathsById, clippedById,'clipped groups')
 
-
+if (removeClipping) {
+    _.each(clipPaths, function (c) {
+        c.remove();
+    });
+}
 
 document.body.innerHTML = '<svg id="frame-thumbnails" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%"></svg>'
 
@@ -28,6 +33,7 @@ buildFrameHolders();
 
 var i = 0;
 var intervalId = setInterval(function () {
+    console.log ('updating ' + framesInStory + ' frames');
     //update all the frames by clearing and setting them...
     for (var j=0;j<framesInStory;j++){
         var startTime = Date.now();
@@ -40,21 +46,22 @@ var intervalId = setInterval(function () {
 
 
     if (i % sampleEvery === 0) {
-        console.log(i, accumulated / sampleEvery, 'ms');
+        console.log('update cycle', i, ': ',accumulated / sampleEvery / framesInStory, 'ms per frame');
         samples.push(accumulated / sampleEvery);
         accumulated = 0;
     }
+    console.log ('FINISHED updating ' + framesInStory + ' frames');
     if (i >= numberOfUpdates) {
         console.log('DONE!');
         console.log(samples);
         clearInterval(intervalId);
     }
-}, 45);
+}, 200);
 
 var offset = 0;
 function generateDeviceNode(shuffleClipPaths){
     //return frameTemplate.cloneNode(true).querySelector('.widget-device');
-    if (shuffleClipPaths){
+    if (!removeClipping && shuffleClipPaths){
         _.each(clipPathsById,function(cp,id){
             var newId = id + '---' + (offset++);
             cp.setAttribute('id',newId);
