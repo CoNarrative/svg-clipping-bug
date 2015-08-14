@@ -1,17 +1,22 @@
 var svgns = "http://www.w3.org/2000/svg";
 var framesInStory = 10;
-var numberOfUpdates = 20;
-var sampleEvery = 2;
+var numberOfUpdates = 10;
+var sampleEvery = 1;
 var accumulated = 0;
 var samples = [];
 
 var frameHolderTemplate=document.getElementById('frame-holder-template');
-var frameTemplate =document.getElementById('frame-template-svg-root');
-//not really a template right now...
-var clipPaths = frameTemplate.querySelectorAll('clipPath');
-for (var i=0;i<clipPaths.length;i++){
-    clipPaths[i].remove();
-}
+var frameTemplate =document.getElementById('frame-template');
+//remove from template
+var clipPaths = frameTemplate.content.querySelectorAll('clipPath');
+var clipPathsById = _.indexBy(clipPaths,'id');
+var clipped = frameTemplate.content.querySelectorAll('*[clip-path]');
+var clippedById = _.groupBy(clipped,function(el){
+    var c = el.getAttribute('clip-path');
+    return c.substring(5, c.length-1)});
+
+console.log(clipPathsById, clippedById,'clipped groups')
+
 
 
 document.body.innerHTML = '<svg id="frame-thumbnails" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%"></svg>'
@@ -46,15 +51,25 @@ var intervalId = setInterval(function () {
     }
 }, 45);
 
-function generateDeviceNode(){
-    return frameTemplate.cloneNode(true).querySelector('.widget-device');
-    //return document.importNode(frameTemplate.content,true).querySelector('.widget-device');
+var offset = 0;
+function generateDeviceNode(shuffleClipPaths){
+    //return frameTemplate.cloneNode(true).querySelector('.widget-device');
+    if (shuffleClipPaths){
+        _.each(clipPathsById,function(cp,id){
+            var newId = id + '---' + (offset++);
+            cp.setAttribute('id',newId);
+            _.each(clippedById[id], function(thisClipped){
+                thisClipped.setAttribute('clip-path','url(#' + newId +')');
+            })
+        });
+    }
+    return document.importNode(frameTemplate.content,true).querySelector('.widget-device');
 }
 
 function setFrame(j){
     var frame=document.getElementById('frame-'+j);
     if (!frame)return;
-    var deviceNode = generateDeviceNode();
+    var deviceNode = generateDeviceNode(true);
     var contentNode = frame.querySelector('.frame-thumbnail > .frame-body > .content');
     contentNode.appendChild(deviceNode);
 }
