@@ -1,0 +1,119 @@
+#error-modal{
+  z-index: 9999;
+}
+
+/* Document Dialog Action Menu */
+.document-dialog,
+.project-dialog  {
+  @include box-sizing(border-box);
+  display: none;
+  padding: 33px;
+  width: 430px;
+  height:190px;
+  margin-top: 0px;
+  @include border-radius(2px 2px 0 2px);
+  position: absolute;
+  z-index: 999999;
+  background-color: white;
+  font-size: 13px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  @include box-shadow(0 0 46px rgba(0, 0, 0, 0.3));
+}
+
+.project-dialog  h3,
+.document-dialog  h3 {
+  margin-top: 0px;
+  font-size: 1.17em !important;
+  //margin: 1em 0;
+}
+.project-dialog button,
+.document-dialog button {
+  height: 30px;
+  width: 72px;
+}
+
+.project-dialog h2,
+.document-dialog h2 {
+  font-size: 31.5px;
+}
+.project-dialog h1, h2, h3,
+.document-dialog h1, h2, h3 {
+  line-height: 40px;
+}
+.project-dialog h1 h2 h3 h4 h5 h6,
+.document-dialog h1 h2 h3 h4 h5 h6 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+
+
+
+/* User Presense */
+.userpresence-dialog {
+  @include box-sizing(border-box);
+//  display: none;
+  padding: 10px;
+  width: 200px;
+  height:auto;
+  margin-top: 0px;
+  @include border-radius(2px 2px 0 2px);
+  position: absolute;
+  z-index: 999999;
+  background-color: white;
+  font-size: 13px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  @include box-shadow(0 0 46px rgba(0, 0, 0, 0.3));
+}
+ul.userlist,ol.userlist {
+  list-style:none;
+  padding:0px;
+}
+.userlist li {
+  //margin:5px;
+  height:25px;
+  //margin-bottom:3px;
+}
+.userlist .userpresence-userpresence-name {
+  margin-left:5px;
+  //vertical-align:middle;
+}
+.userlist span {
+  vertical-align:middle;
+}
+.userlist #status-icon,
+.userlist #location-icon
+{
+  //vertical-align:middle;
+  float:right;
+  margin-right:10px;
+  margin-top:4px;
+}
+
+.userlist .icon-location-arrow:hover
+{
+  cursor:hand;
+  text-shadow: 3px 3px 3px #999999;
+}
+
+.timeline-branchchooser-dialog{
+  @include box-sizing(border-box);
+  display: none;
+  //padding: 10px;
+  width: 300px;
+  height:auto;
+  margin-top: 0px;
+  @include border-radius(2px 2px 0 2px);
+  position: absolute;
+  z-index: 999999;
+  background-color: white;
+  font-size: 13px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  //@include box-shadow(0 0 46px rgba(0, 0, 0, 0.3));
+}
+
+

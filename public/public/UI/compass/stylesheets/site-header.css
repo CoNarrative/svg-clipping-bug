@@ -1,0 +1,164 @@
+/* line 26, ../sass/base.scss */
+body {
+  background-color: #eeede5;
+}
+
+/* line 4, ../sass/site-header.scss */
+.site-header {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzU4OWVjMiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzQ3N2E5NSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #589ec2), color-stop(100%, #477a95));
+  background-image: -moz-linear-gradient(#589ec2, #477a95);
+  background-image: -webkit-linear-gradient(#589ec2, #477a95);
+  background-image: linear-gradient(#589ec2, #477a95);
+  color: white;
+  background-color: lightblue;
+}
+
+/* line 12, ../sass/site-header.scss */
+.logo-dropdown {
+  cursor: pointer;
+  pointer-events: all;
+}
+
+/* line 17, ../sass/site-header.scss */
+.logo-img-ddl {
+  width: 40px;
+  pointer-events: all;
+}
+
+/* line 21, ../sass/site-header.scss */
+.header {
+  background-color: white;
+  border-bottom: 1px #DADADA solid;
+}
+
+/* line 25, ../sass/site-header.scss */
+.site-header .site-menu-trigger {
+  margin-left: 0px;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+/* line 30, ../sass/site-header.scss */
+.site-header .document-name {
+  margin-left: 20px;
+  font-size: 18px;
+  pointer-events: all;
+}
+
+/* line 36, ../sass/site-header.scss */
+.site-header .player-tools {
+  display: none;
+}
+
+/* line 39, ../sass/site-header.scss */
+.player-mode .player-tools {
+  display: block;
+}
+
+/* line 43, ../sass/site-header.scss */
+.player-tools {
+  border: solid 1px;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+}
+
+/* line 49, ../sass/site-header.scss */
+.player-tools a {
+  color: #787878;
+}
+
+/* line 53, ../sass/site-header.scss */
+.site-header .filler {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+
+/* line 61, ../sass/site-header.scss */
+.site-header .user-trigger {
+  margin-left: 0px;
+  font-size: 16px;
+  pointer-events: all;
+}
+
+/* line 92, ../sass/site-header.scss */
+.site-header .presence.enabled {
+  cursor: hand;
+  text-shadow: 3px 3px 3px #999999;
+}
+
+/* line 97, ../sass/site-header.scss */
+.site-header .presence.disabled {
+  cursor: none;
+  color: #cccccc;
+  pointer-events: none;
+}
+
+/* line 119, ../sass/site-header.scss */
+.topbar-proper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0px;
+  /* to undo the ul padding */
+  padding-left: 0px;
+  /*to undo the ul padding */
+}
+
+/* line 127, ../sass/site-header.scss */
+.topbar-proper li {
+  list-style-type: none;
+  display: block;
+}
+
+/* line 131, ../sass/site-header.scss */
+.topbar-proper .flex-spacer {
+  flex: 1;
+}
+
+/* line 135, ../sass/site-header.scss */
+.topbar-menu-item > a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #777777;
+}
+
+/* line 140, ../sass/site-header.scss */
+.topbar-menu-item :hover {
+  background-color: #E7E7E7;
+}
+
+/* line 143, ../sass/site-header.scss */
+.topbar-menu-item > .dropdown-menu {
+  margin-top: 10px !important;
+}
+
+/* line 147, ../sass/site-header.scss */
+.topbar-menu-item.open > a {
+  background-image: linear-gradient(to bottom, #dbdbdb 0%, #e2e2e2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdbdbdb', endColorstr='#ffe2e2e2', GradientType=0);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.075);
+  color: #555;
+  background-color: #e7e7e7;
+}
+
+/* line 156, ../sass/site-header.scss */
+.topbar-proper.not-view-mode-document .user-menu > a,
+.topbar-proper.not-view-mode-document .user-menu > a > * {
+  color: white !important;
+  margin-right: 8px;
+}
+
+/* line 162, ../sass/site-header.scss */
+.header .connection-state span {
+  border-radius: 8px;
+  line-height: 1.4;
+}

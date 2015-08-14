@@ -1,0 +1,208 @@
+.left-mode-tabs {
+  float:right;
+}
+.left-mode-tabs li {
+  display:inline-block;
+  padding:0px 3px;
+}
+.left-mode-tabs a {
+  text-transform:none;
+  text-decoration:none;
+  padding:0px 3px;
+}
+.left-mode-tabs li a.active {
+  @include box-shadow(3px 0 4px $box-shadow-brown);
+  background: $lightBrown;
+}
+
+.frame-tree .tools {
+  text-align:center;
+  margin: 10 0
+}
+.frame-tree .add-frame {
+  @include transition(color .3s ease);
+  cursor: pointer;
+  color: rgba(111, 213, 12, 0.70);
+}
+.frame-tree .add-frame:hover {
+  color: rgb(79, 244, 4);
+}
+/* FRAME TREE */
+
+.frame-tree {
+  height: 50%;
+  padding: 6px 6px 0;
+  min-width: 230px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.player-mode .frame-tree {
+  height:100%;
+}
+
+.frame-node {
+  //margin-top:8px;
+  //line-height:16pt;
+  //padding-top:2px;
+  //padding-bottom:2px;
+}
+
+.frame-node-body {
+  cursor:pointer;
+}
+//.player-mode .frame-node[data-id="eternal"] > .frame-node-body {
+//  display:none;
+//}
+
+.frame-node.indent-children {
+  margin-top: 0;
+}
+
+.frame-node .delete {
+  float:right;
+  margin-right:-18px;
+  margin-top:3px;
+}
+
+.frame-list-mode .delete {
+  margin-right:0px;
+}
+
+.frame-node-body {
+  margin-top:3px;
+  margin-bottom:3px;
+  padding-top:2px;
+  padding-bottom:2px;
+}
+
+//.frame-list-mode .frame-node-body  {
+//  padding: 0px 2px;
+//  margin-right:15px;
+//}
+
+.frame-tree-mode .frame-node-body {
+  padding: 0px 2px;
+  margin-right:15px;
+}
+
+.frame-info  {
+  text-align:center;
+  font-size:11px;
+  //padding: 3px 0px;
+  //margin: 2px 3px;
+  margin-bottom:5px;
+  //margin:2px 0px;
+  padding:0px;
+  font-style:italic;
+  height:0px;
+  overflow:hidden;
+  height:80px;
+//  border:solid 1px;
+  //-webkit-transition: height .4s;
+}
+
+.frame-info {
+  //background-color:rgba(0,0,0,.20)
+}
+.flow-title-header {
+  font-weight:bold;
+  margin-top:7px;
+  padding: 10px 2px 5px 2px;
+  text-align:center;
+  font-size:1.3em;
+  border-top: thin solid #303030
+}
+.flow-selection-header {
+  //background-color:#999999;
+  background-color:#666666;
+  color:white;
+  font-size:1.3em;
+  padding:8px 2px;
+  text-align:center;
+  @include border-radius(4px);
+}
+.flow-selection-header .choose {
+  cursor:pointer;
+  //padding-left:4px;Ø
+  float:right;
+}
+
+.exit-trigger-line {
+  text-align:center;
+//  border:solid 1px;
+  padding: 4px 0px;
+  margin: 8px 0px;
+}
+
+//.frame-node.show-info > .frame-node-body .frame-info{
+//  height:18px;
+//}
+
+//This is for the whole thing
+.frame-node.indent > .frame-node-body {
+  margin-left:5px;
+}
+
+//This is just its children
+.frame-node.indent-children > .exits {
+  margin-left:5px;
+}
+
+.frame-node.hide-body > .frame-node-body {
+  display:none;
+}
+
+.flow-mode .frame-node-action {
+  font-size:13px;
+}
+
+.frame-node.off-stage > .frame-node-body {
+  opacity:.45;
+}
+
+.frame-node.hide-children > .exits {
+  height:0px;
+  display:none;
+}
+
+.frame-node .exits {
+  //max-height:0px;
+  //transition: 1s;
+  //transition: max-height 1s;
+  //-webkit-transition: max-height 1s;
+}
+
+.nodes:not(.in-list) .frame-node:not(.in-trigger).selected > .frame-node-body {
+  @include border-radius(2px);
+  background: #e0e0e0;
+}
+.nodes:not(.in-list) .frame-node:not(.in-list).selected > .frame-node-body .label{
+  background-color: black;
+}
+
+.in-list .frame-node.selected.in-trigger > .frame-node-body .exit-trigger-line{
+  @include border-radius(2px);
+  //background: rgba(255, 255, 255, .5);
+  background:#e0e0e0;
+}
+.in-list .frame-node.selected:not(.in-trigger) > .frame-node-body .frame-info {
+  @include border-radius(2px);
+  //background: rgba(255, 255, 255, .5);
+  background:#e0e0e0;
+}
+
+.frame-node-action {
+  font-size:12px;
+}
+
+ div[data-id="eternal"]>.frame-node-body .frame-info {
+  display:none;
+}
+ .frame-node-body:focus{
+   outline:none;
+ }
+
+ .more-branches {
+   background-color: #82AF6F!important;
+ }

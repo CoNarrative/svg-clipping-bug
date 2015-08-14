@@ -1,0 +1,359 @@
+/*.editor-widget-search {*/
+    /*margin: 8px;*/
+    /*font-size: 10px;*/
+    /*width: 130px;*/
+/*}*/
+
+/*.palette-widgets {*/
+    /*overflow-y: auto;*/
+/*}*/
+
+/*#editor {*/
+    /*position: absolute;*/
+    /*padding: 14px;*/
+    /*background-color: #f1faef;*/
+    /*left: 152px; *//*the palette width*/
+    /*right: 251px; *//* the property editor width */
+    /*bottom: 200px; *//* timeline height */
+    /*top: 40px;*/
+    /*z-index: 500;*/
+    /*overflow: hidden;*/
+    /*Disable text selection in editor proper*/
+    /*user-select: none;*/
+    /*-moz-user-select: none;*/
+    /*-webkit-user-select: none;*/
+/*}*/
+
+/*.editor-root {*/
+    /*height: 100%;*/
+/*}*/
+
+#timeline-sencha {
+    padding:5px 20px 20px 20px;
+}
+
+#timeline {
+    position: absolute;
+    background-color: #eeede5;
+    bottom: 0px;
+    /*left:140px;*/
+    right: 0px;
+    left: 0px;
+    /*margin:5px;*/
+    height: 200px;
+    z-index: 10000;
+    border: 1px solid;
+    /*box-shadow: 6px -6px 6px rgba(0, 0, 0, 0.075);*/
+    /*border-radius:15px;*/
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-color: lightgray;
+}
+
+#timeline .controls {
+    position: absolute;
+    /*top:70px;*/
+    left: 20px;
+    width: 140px;
+    -webkit-filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.5));
+}
+
+.timeline-controls {
+    /*font-family: 'Roboto', sans-serif;*/
+    font-size: 14px;
+    padding: 10px;
+}
+
+.widget-paragraph-div {
+    white-space: pre-wrap; /* css-3 */
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+    padding: 5px;
+    -webkit-user-select: none;
+    user-select:none;
+}
+/** Remove top and bottom margins**/
+.widget-paragraph-div > :first-child { margin-top: 0 !important;  }
+.widget-pargraphs-div > :last-child { margin-bottom: 0 !important;  }
+
+.widget-button-text {
+    -webkit-user-select: none;
+    user-select:none;
+}
+.widget-label-text {
+    padding: 5px;
+    -webkit-user-select: none;
+    user-select:none;
+}
+
+/**ONLY IN THE THUMBNAIL **/
+.timeline-text.frame-action-block {
+    /*font-family: 'Roboto', sans-serif;*/
+    font-size: 11px;
+    color: #5d5d5d !important;
+    padding: 7px;
+    line-height: 11px;
+    vertical-align: baseline;
+    text-align: center;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    padding-right:12px;
+}
+
+.step-number {
+    background-color: #878787;
+}
+.frame-action-verb {
+    font-weight: bold;
+}
+
+.frame-action-value {
+    /*background-color: lightgoldenrodyellow;*/
+    font-style:italic;
+}
+
+.frame-action-target-path {
+}
+
+.frame-action-target {
+    color:#59b9e6;
+}
+
+.frame-action-flow-title {
+    padding-left:4px;
+    font-size:1.2em;
+}
+
+.flow-name {
+    font-size: 12px;
+    text-align: center;
+    /*font-family: 'Roboto', sans-serif;*/
+    line-height: 13px;
+    cursor:pointer;
+}
+
+.flow-branch-picker-list {
+    list-style-type: none;
+    /*font-family: 'Roboto', sans-serif;*/
+    font-size: 12px;
+    line-height: 18px;
+    padding: 10px;
+    margin: 0px;
+}
+
+.flow-branch-picker-list li {
+    margin-left:27px;
+    /*padding-left: 12px ;*/
+    /*text-indent: -12px ;*/
+}
+.flow-branch-picker-list li .label {
+    margin-left: -25px;
+    margin-top: 4px;
+}
+
+.flow-branch-picker-list .active {
+    color: white;
+    background-color: rgba(64, 55, 212, 0.58);
+}
+
+.flow-branch-picker-list .active .label {
+    background-color:black;
+}
+
+.flow-branch-picker-list li:hover {
+    cursor:hand;
+    background-color: rgba(64, 55, 212, 0.90);
+    color: white;
+}
+/** Drag handle stuff still in use by the switch panels */
+/* Panel stuff */
+.drag-handle.fa-move{
+    font-size:20px;
+    /*color: #b05a00;*/
+    /*-webkit-filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.33));*/
+}
+
+/** Stack stuff **/
+
+.switchable-surface-menu {
+    -webkit-transition: opacity 0.3s ease;
+    position: relative;
+    top: -26px;
+    left:20px;
+}
+
+.switchable-drop-label {
+    position: absolute;
+    top: 0px;
+    padding: 5px 8px;
+    opacity: 0.9;
+    width: 180px;
+    display: block;
+    /*float:left;*/
+    color: #FFF;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0C91EC), color-stop(100%, #257AB6)); /* webkit */
+}
+
+.switchable-drop-label {
+    -webkit-transition: opacity 0.3s ease;
+    display: none;
+}
+
+.dropping-over .switchable-drop-label {
+    display: inherit;
+}
+
+.drag-handle.fa-move {
+    position: absolute;
+    top: 0px;
+    cursor: -webkit-grab;
+}
+
+.hidden .fa-move {
+    display: none;
+}
+
+.fixed-in-place .fa-move {
+    display: none;
+}
+
+.switchable-surface-menu .menubutton {
+    position: relative;
+    opacity: 0.9;
+    width: 180px;
+    padding: 5px 8px;
+    display: block;
+    /*float:left;*/
+    color: #FFF;
+    cursor:pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background: #888888; /* old browsers */
+}
+
+.switchable-surface-menu .menutrigger {
+    background-image: url(./images/pulldown-arrow.gif)
+}
+
+.switchable-surface-menu span {
+    opacity: 1;
+}
+
+.switchable-surface-menu.hidden {
+    display:none;
+}
+
+.switchable-surface-list {
+    -webkit-transition: height 1s ease;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0C91EC), color-stop(100%, #257AB6)); /* webkit */
+}
+
+.switchable-surface-menu.collapsed .switchable-surface-list {
+    height: 0px;
+    display: none;
+}
+
+.switchable-surface-list div {
+    opacity: 1.0;
+    width: 180px;
+    display: block;
+    /*float:left;*/
+    color: #FFF;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(12, 145, 236, 0.95)), color-stop(100%, rgba(37, 122, 182, 0.95))); /* webkit */
+}
+
+.switchable-surface-list .switchable-surface-header {
+    /*margin:0 2px 0 0;*/
+    padding: 5px 8px;
+}
+
+.switchable-surface-list .switchable-surface-spacer {
+    height: 0px;
+    padding: 0px 8px;
+    opacity: 0;
+    /*-webkit-transition: height .1s ease;*/
+}
+
+.multimode .switchable-surface-list .switchable-surface-header:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(115, 180, 244, 0.95)), color-stop(100%, rgba(120, 195, 209, 0.95))); /* webkit */
+    cursor: pointer;
+    color: #333;
+}
+
+.multimode .switchable-surface-list .switchable-surface-header.active {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(145, 202, 244, 0.95)), color-stop(100%, rgba(149, 209, 255, 0.95))); /* webkit */
+    cursor: pointer;
+    color: #333;
+}
+
+.switchable-surface-list .switchable-surface-spacer.active {
+    height: 23px;
+    border-style: dotted;
+    border-width: 3px;
+    border-color: white;
+    opacity: 1;
+}
+
+.pe-childElement-active-true {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(12, 150, 244, 0.91)), color-stop(100%, rgba(40, 142, 209, 0.91))); /* webkit */
+}
+.pe-childElement-activecard-true {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(12, 150, 244, 0.2)), color-stop(100%, rgba(40, 142, 209, 0.2))); /* webkit */
+}
+
+.action-config label {
+    /*font-family: 'Roboto', sans-serif;*/
+    font-size: 14px;
+}
+.action-config .x-form-text {
+    /*font-family: 'Roboto', sans-serif;*/
+    font-size: 14px;
+}
+.action-config .x-header-text {
+    /*font-family: 'Roboto', sans-serif;*/
+    font-size: 14px;
+}
+
+.player-mode .action-config-anchor {
+    opacity:0;
+    -webkit-transition:opacity .3s;
+    /*-webkit-transition-delay:.2s;*/
+    /*delay until after pointer move done */
+}
+.player-mode .action-config-anchor.reveal-action {
+    opacity:1;
+}
+.action-pointer {
+    display:none;
+    opacity:0;
+    -webkit-transition: -webkit-transform 0.5s;
+    -webkit-transition-delay:.2s
+}
+.player-mode .action-pointer {
+    display:inherit;
+    /*opacity:0;*/
+    opacity:.8;
+}
+.action-trigger-mode .action-pointer {
+    opacity:.8;
+}
+
+.pointer-finger {
+    font-size:30px;
+    stroke:green;
+    fill:green;
+    font-family:FontAwesome;
+    dominant-baseline:central;
+}
+
+.flow-selection-header {
+    display:none;
+}

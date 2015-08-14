@@ -1,0 +1,512 @@
+/* line 26, ../sass/base.scss */
+body {
+  background-color: #eeede5;
+}
+
+/* line 4, ../sass/site-header.scss */
+.site-header {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzU4OWVjMiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzQ3N2E5NSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #589ec2), color-stop(100%, #477a95));
+  background-image: -moz-linear-gradient(#589ec2, #477a95);
+  background-image: -webkit-linear-gradient(#589ec2, #477a95);
+  background-image: linear-gradient(#589ec2, #477a95);
+  color: white;
+  background-color: lightblue;
+}
+
+/* line 12, ../sass/site-header.scss */
+.logo-dropdown {
+  cursor: pointer;
+  pointer-events: all;
+}
+
+/* line 17, ../sass/site-header.scss */
+.logo-img-ddl {
+  width: 40px;
+  pointer-events: all;
+}
+
+/* line 21, ../sass/site-header.scss */
+.header {
+  background-color: white;
+  border-bottom: 1px #DADADA solid;
+}
+
+/* line 25, ../sass/site-header.scss */
+.site-header .site-menu-trigger {
+  margin-left: 0px;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+/* line 30, ../sass/site-header.scss */
+.site-header .document-name {
+  margin-left: 20px;
+  font-size: 18px;
+  pointer-events: all;
+}
+
+/* line 36, ../sass/site-header.scss */
+.site-header .player-tools {
+  display: none;
+}
+
+/* line 39, ../sass/site-header.scss */
+.player-mode .player-tools {
+  display: block;
+}
+
+/* line 43, ../sass/site-header.scss */
+.player-tools {
+  border: solid 1px;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+}
+
+/* line 49, ../sass/site-header.scss */
+.player-tools a {
+  color: #787878;
+}
+
+/* line 53, ../sass/site-header.scss */
+.site-header .filler {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+
+/* line 61, ../sass/site-header.scss */
+.site-header .user-trigger {
+  margin-left: 0px;
+  font-size: 16px;
+  pointer-events: all;
+}
+
+/* line 92, ../sass/site-header.scss */
+.site-header .presence.enabled {
+  cursor: hand;
+  text-shadow: 3px 3px 3px #999999;
+}
+
+/* line 97, ../sass/site-header.scss */
+.site-header .presence.disabled {
+  cursor: none;
+  color: #cccccc;
+  pointer-events: none;
+}
+
+/* line 119, ../sass/site-header.scss */
+.topbar-proper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0px;
+  /* to undo the ul padding */
+  padding-left: 0px;
+  /*to undo the ul padding */
+}
+
+/* line 127, ../sass/site-header.scss */
+.topbar-proper li {
+  list-style-type: none;
+  display: block;
+}
+
+/* line 131, ../sass/site-header.scss */
+.topbar-proper .flex-spacer {
+  flex: 1;
+}
+
+/* line 135, ../sass/site-header.scss */
+.topbar-menu-item > a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #777777;
+}
+
+/* line 140, ../sass/site-header.scss */
+.topbar-menu-item :hover {
+  background-color: #E7E7E7;
+}
+
+/* line 143, ../sass/site-header.scss */
+.topbar-menu-item > .dropdown-menu {
+  margin-top: 10px !important;
+}
+
+/* line 147, ../sass/site-header.scss */
+.topbar-menu-item.open > a {
+  background-image: linear-gradient(to bottom, #dbdbdb 0%, #e2e2e2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdbdbdb', endColorstr='#ffe2e2e2', GradientType=0);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.075);
+  color: #555;
+  background-color: #e7e7e7;
+}
+
+/* line 156, ../sass/site-header.scss */
+.topbar-proper.not-view-mode-document .user-menu > a,
+.topbar-proper.not-view-mode-document .user-menu > a > * {
+  color: white !important;
+  margin-right: 8px;
+}
+
+/* line 162, ../sass/site-header.scss */
+.header .connection-state span {
+  border-radius: 8px;
+  line-height: 1.4;
+}
+
+/* line 3, ../sass/project.scss */
+body {
+  background-color: white;
+}
+
+/*Boostrap workaround for model pulling over*/
+/* line 8, ../sass/project.scss */
+.modal-open .navbar-fixed-top,
+body.modal-open {
+  margin-right: 0px;
+}
+
+/*Bringing our menus to the front*/
+/* line 14, ../sass/project.scss */
+.dropdown-menu {
+  z-index: 99999;
+}
+
+/*Cn-org*/
+/* line 19, ../sass/project.scss */
+.cn-orgs div {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* line 24, ../sass/project.scss */
+.cn-orgs-wrapper {
+  max-width: 245px;
+  min-width: 130px;
+}
+
+/* line 31, ../sass/project.scss */
+.cn-org {
+  padding: 5px;
+}
+
+/* line 34, ../sass/project.scss */
+.cn-org .space-5 {
+  margin-bottom: 5px;
+}
+
+/* line 37, ../sass/project.scss */
+.cn-org.cn-selected .cn-org-name {
+  padding: 0 5px 0 5px;
+  background-color: #637680;
+  color: #ffffff !important;
+  border: 2px solid;
+  border-radius: 5px;
+}
+
+/* line 45, ../sass/project.scss */
+.cn-org span {
+  cursor: pointer;
+}
+
+/* line 48, ../sass/project.scss */
+.cn-showall {
+  font-size: 12px;
+}
+
+/* line 51, ../sass/project.scss */
+.showAll.disabled {
+  opacity: .5;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+/* line 57, ../sass/project.scss */
+.newuser {
+  padding: 4px !important;
+  width: auto !important;
+}
+
+/*Copied from bootsrap*/
+/* line 63, ../sass/project.scss */
+.cn-table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* line 68, ../sass/project.scss */
+.cn-table > thead > tr > th,
+.cn-table > tbody > tr > th,
+.cn-table > tfoot > tr > th,
+.cn-table > thead > tr > td,
+.cn-table > tbody > tr > td,
+.cn-table > tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.428571429;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+
+/* line 80, ../sass/project.scss */
+.cn-table > thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dddddd;
+}
+
+/* line 85, ../sass/project.scss */
+.cn-table > caption + thead > tr:first-child > th,
+.cn-table > colgroup + thead > tr:first-child > th,
+.cn-table > thead:first-child > tr:first-child > th,
+.cn-table > caption + thead > tr:first-child > td,
+.cn-table > colgroup + thead > tr:first-child > td,
+.cn-table > thead:first-child > tr:first-child > td {
+  border-top: 0;
+}
+
+/* line 94, ../sass/project.scss */
+.cn-table > tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+
+/* line 98, ../sass/project.scss */
+.cn-table .cn-table {
+  background-color: #ffffff;
+}
+
+/* line 102, ../sass/project.scss */
+.cn-table-condensed > thead > tr > th,
+.cn-table-condensed > tbody > tr > th,
+.cn-table-condensed > tfoot > tr > th,
+.cn-table-condensed > thead > tr > td,
+.cn-table-condensed > tbody > tr > td,
+.cn-table-condensed > tfoot > tr > td {
+  padding: 5px;
+}
+
+/* line 111, ../sass/project.scss */
+.cn-table-bordered {
+  border: 1px solid #dddddd;
+}
+
+/* line 115, ../sass/project.scss */
+.cn-table-bordered > thead > tr > th,
+.cn-table-bordered > tbody > tr > th,
+.cn-table-bordered > tfoot > tr > th,
+.cn-table-bordered > thead > tr > td,
+.cn-table-bordered > tbody > tr > td,
+.cn-table-bordered > tfoot > tr > td {
+  border: 1px solid #dddddd;
+}
+
+/* line 124, ../sass/project.scss */
+.cn-table-bordered > thead > tr > th,
+.cn-table-bordered > thead > tr > td {
+  border-bottom-width: 2px;
+}
+
+/* line 129, ../sass/project.scss */
+.cn-table-striped > tbody > tr:nth-child(odd) > td,
+.cn-table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: #f9f9f9;
+}
+
+/* line 134, ../sass/project.scss */
+.cn-table-hover > tbody > tr:hover > td,
+.cn-table-hover > tbody > tr:hover > th {
+  background-color: #f5f5f5;
+}
+
+/* line 139, ../sass/project.scss */
+table col[class*="col-"] {
+  position: static;
+  display: table-column;
+  float: none;
+}
+
+/* line 145, ../sass/project.scss */
+table td[class*="col-"],
+table th[class*="col-"] {
+  display: table-cell;
+  float: none;
+}
+
+/* line 151, ../sass/project.scss */
+.cn-table > thead > tr > .active,
+.cn-table > tbody > tr > .active,
+.cn-table > tfoot > tr > .active,
+.cn-table > thead > .active > td,
+.cn-table > tbody > .active > td,
+.cn-table > tfoot > .active > td,
+.cn-table > thead > .active > th,
+.cn-table > tbody > .active > th,
+.cn-table > tfoot > .active > th {
+  background-color: #f5f5f5;
+}
+
+/* line 163, ../sass/project.scss */
+.cn-table-hover > tbody > tr > .active:hover,
+.cn-table-hover > tbody > .active:hover > td,
+.cn-table-hover > tbody > .active:hover > th {
+  background-color: #e8e8e8;
+}
+
+/* line 169, ../sass/project.scss */
+.cn-table > thead > tr > .success,
+.cn-table > tbody > tr > .success,
+.cn-table > tfoot > tr > .success,
+.cn-table > thead > .success > td,
+.cn-table > tbody > .success > td,
+.cn-table > tfoot > .success > td,
+.cn-table > thead > .success > th,
+.cn-table > tbody > .success > th,
+.cn-table > tfoot > .success > th {
+  background-color: #dff0d8;
+}
+
+/* line 180, ../sass/project.scss */
+.cn-table > thead > tr > .info,
+.cn-table > tbody > tr > .info,
+.cn-table > tfoot > tr > .info,
+.cn-table > thead > .info > td,
+.cn-table > tbody > .info > td,
+.cn-table > tfoot > .info > td,
+.cn-table > thead > .info > th,
+.cn-table > tbody > .info > th,
+.cn-table > tfoot > .info > th {
+  background-color: #d9edf7;
+}
+
+/* line 192, ../sass/project.scss */
+.cn-table-hover > tbody > tr > .success:hover,
+.cn-table-hover > tbody > .success:hover > td,
+.cn-table-hover > tbody > .success:hover > th {
+  background-color: #d0e9c6;
+}
+
+/* line 198, ../sass/project.scss */
+.cn-table > thead > tr > .danger,
+.cn-table > tbody > tr > .danger,
+.cn-table > tfoot > tr > .danger,
+.cn-table > thead > .danger > td,
+.cn-table > tbody > .danger > td,
+.cn-table > tfoot > .danger > td,
+.cn-table > thead > .danger > th,
+.cn-table > tbody > .danger > th,
+.cn-table > tfoot > .danger > th {
+  background-color: #f2dede;
+}
+
+/* line 210, ../sass/project.scss */
+.cn-table-hover > tbody > tr > .danger:hover,
+.cn-table-hover > tbody > .danger:hover > td,
+.cn-table-hover > tbody > .danger:hover > th {
+  background-color: #ebcccc;
+}
+
+/* line 216, ../sass/project.scss */
+.cn-table > thead > tr > .warning,
+.cn-table > tbody > tr > .warning,
+.cn-table > tfoot > tr > .warning,
+.cn-table > thead > .warning > td,
+.cn-table > tbody > .warning > td,
+.cn-table > tfoot > .warning > td,
+.cn-table > thead > .warning > th,
+.cn-table > tbody > .warning > th,
+.cn-table > tfoot > .warning > th {
+  background-color: #fcf8e3;
+}
+
+/* line 228, ../sass/project.scss */
+.cn-table-hover > tbody > tr > .warning:hover,
+.cn-table-hover > tbody > .warning:hover > td,
+.cn-table-hover > tbody > .warning:hover > th {
+  background-color: #faf2cc;
+}
+
+/* line 236, ../sass/project.scss */
+.header {
+  border-bottom: none !important;
+}
+
+/* Page Header */
+/* line 241, ../sass/project.scss */
+.page-header {
+  padding-bottom: 3px;
+  height: 50px;
+  margin: 0 0 0 0;
+  border-bottom: 1px dotted #e2e2e2;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+/* line 250, ../sass/project.scss */
+.page-nav {
+  line-height: 50px;
+  padding: 0;
+}
+
+/* line 254, ../sass/project.scss */
+.page-actions {
+  line-height: 50px;
+  padding: 0;
+}
+
+/* line 263, ../sass/project.scss */
+.table-responsive {
+  padding: 0 15px 0 15px;
+}
+
+/* line 267, ../sass/project.scss */
+i.cn-project-settings {
+  cursor: pointer;
+  font-size: 18px;
+  color: gray;
+  width: 1em;
+  height: 1em;
+  line-height: 1px;
+}
+
+/* Need to cleanup the above */
+/*Bootstrap Overrides*/
+/* line 282, ../sass/project.scss */
+.breadcrumb {
+  font-size: 18px;
+}
+
+/* line 285, ../sass/project.scss */
+.breadcrumb > li + li:before {
+  font-size: 18px;
+}
+
+/* line 288, ../sass/project.scss */
+.breadcrumb > * {
+  vertical-align: middle;
+}
+
+/* line 291, ../sass/project.scss */
+.actions {
+  margin-right: 15px;
+}
+
+@media only screen and (max-width: 991px) {
+  /* line 295, ../sass/project.scss */
+  .breadcrumb {
+    margin-left: 12px;
+  }
+
+  /* line 300, ../sass/project.scss */
+  .cn-profile,
+  .cn-project-settings {
+    margin: 0 15px 0 15px;
+  }
+}

@@ -1,0 +1,32 @@
+/*
+ * PANELS (SURFACES)
+ */
+
+
+.body-panel .surface-grid {
+    pointer-events:none;
+}
+
+.body-panel .surface-grid {
+    display:none;
+}
+
+.body-panel.show-grid-lines .surface-grid {
+    display:inherit;
+}
+
+/* Change mouse on hover over surface */
+.body-panel .panel-background {
+    cursor: default;
+}
+
+/* Hide scratch surface */
+.body-scratch {
+    display:none!important;
+}
+
+/* simple hit boxes added as needed for selection */
+.simple-hit-box{
+    visibility:hidden;
+    pointer-events:all;
+}

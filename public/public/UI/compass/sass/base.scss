@@ -1,0 +1,28 @@
+$lightBlue: #589ec2;
+$midBlue: #477a95;
+
+// darker brown colors
+$superLightBrown: #eae6dd;
+$lightBrown: #d2ccbc;
+$midBrown: #979588;
+$darkBrown: #5f5c55;
+
+// lighter brown colors for testing
+$superLightBrown: #fffcf5;
+$lightBrown: #f1ebdd;
+
+$box-shadow-brown: #d4d3cf;
+
+$textColor: #636059;
+$header-textColor: rgb(2, 2, 2);
+$body-backgroundcolor:#eeede5;
+$toolsPanelWidth: 250px;
+
+@mixin icon-style() {
+  @include border-radius(2px);
+  @include background-image(linear-gradient(#ffffff, $lightBrown));
+}
+
+body {
+  background-color:$body-backgroundcolor;
+}

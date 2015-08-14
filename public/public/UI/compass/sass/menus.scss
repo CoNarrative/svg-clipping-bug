@@ -1,0 +1,335 @@
+/**BOOTSTRAP HACK**/
+.dropdown-submenu{position:relative;}
+.dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
+.dropdown-submenu:hover>.dropdown-menu{display:block;}
+.dropdown-submenu>a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#cccccc;margin-top:5px;margin-right:-10px;}
+.dropdown-submenu:hover:not(.disabled)>a:after{border-left-color:#ffffff;}
+.dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
+.dropdown-submenu.disabled, .drop-down-submenu.disabled a {
+  pointer-events:none;
+  cursor:default!important;
+}
+
+
+/* Right click menu */
+.document-menu {
+  display:none;
+  width:100px;
+  @include border-radius(2px 2px 0 2px);
+  position:absolute;
+  z-index:999999;
+  background-color: white;
+  padding: 0 0 10 0;
+  font-size: 13px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  //@include box-shadow(0 0 46px rgba(0, 0, 0, 0.3));
+}
+
+.document-menu ul {
+
+}
+
+.document-menu li {
+  margin-top:5px;
+  line-height:18px;
+}
+.document-menu li.disabled {
+  pointer-events:none;
+  opacity:.6;
+}
+
+.document-menu li:hover {
+  background:rgba(238, 238, 238, 1);
+  cursor:pointer;
+}
+
+.document-menu li span {
+  margin-left:15px;
+}
+
+.set-state .content-state-item .checkbox {
+  padding:3px 20px 3px 40px;
+}
+
+.set-state li {
+  line-height:13px;
+}
+
+.set-state  {
+  color: #333333!important;
+}
+
+.set-state li.content-state-item {
+  height:auto;
+}
+
+/* Topbar menu */
+
+//
+//.topbar-menu {
+//  display:none;
+//  //width:250px;
+//  //height:200px;
+//  //@include border-radius(2px 2px 0 2px);
+//  //position:absolute;
+//  //z-index:999999;
+//  //background-color: white;
+//  //padding: 0;
+//  //font-size: 13px;
+//  //border: 1px solid rgba(0, 0, 0, 0.15);
+//  @include box-sizing(border-box);
+//  display: none;
+//  //padding: 33px;
+//  width: 200px;
+//  height:auto;
+//  margin-top: 0px;
+//  @include border-radius(2px 2px 0 2px);
+//  position: absolute;
+//  z-index: 999999;
+//  background-color: white;
+//  border: 1px solid rgba(0, 0, 0, 0.15);
+//  @include box-shadow(0 0 46px rgba(0, 0, 0, 0.3));
+//}
+//
+//.topbar-menu li {
+//  //margin-top:5px;
+//  //font-family: 'Open Sans', sans-serif;
+//  //font-size: 14px;
+//  //font-style: normal;
+//  //font-variant: normal;
+//  //font-weight: normal;
+//  //height: 26px;
+//  //line-height: 20px;
+//  font-family: 'Open Sans', sans-serif;
+//  font-size: 14px;
+//  font-style: normal;
+//  font-variant: normal;
+//  font-weight: normal;
+//  height: 26px;
+//  line-height: 20px;
+//  list-style-image: none;
+//  list-style-position: outside;
+//  list-style-type: none;
+//  margin-bottom: 0px;
+//  margin-left: 0px;
+//  margin-right: 0px;
+//  margin-top: 0px;
+//  padding-bottom: 3px;
+//  padding-left: 20px;
+//  padding-right: 20px;
+//  padding-top: 3px;
+//  text-align: left;
+//  text-decoration: none;
+//  text-shadow: rgba(255, 255, 255, 0.4) 1px 1px 0px;
+//  vertical-align: baseline;
+//  white-space: nowrap;
+//}
+//.topbar-menu li.disabled {
+//  pointer-events:none;
+//  opacity:.6;
+//}
+//
+//.topbar-menu ul, .topbar-menu ol {
+//  list-style: none;
+//  padding:0px;
+//}
+//
+//.topbar-menu .root-menu li:hover {
+//  background:rgba(238, 238, 238, 1);
+//  cursor:pointer;
+//}
+//
+//.topbar-menu li span {
+//  //font-size: 16px;
+//  //line-height: 24px;
+//  //margin-left:15px;
+//}
+//
+//.topbar-menu .link label
+//.topbar-menu .link input,
+//.topbar-menu .link span {
+//  display: block;
+//}
+//
+//.link .shortcut{
+//  margin-left: 40px;
+//  font-size: 10px;
+//  font-weight: bold;
+//  margin-top: -10px;
+//  padding-top: 0;
+//  color: black;
+//}
+//
+//.link label {
+//  font-weight: bold;
+//}
+//
+//.link input {
+//  height:25px;
+//}
+//
+//.flyout {
+//  @include border-radius(2px 2px 0 2px);
+//  z-index:999999;
+//  background-color: white;
+//  border: 1px solid rgba(0, 0, 0, 0.15);
+//  width: 230px;
+//  height:180px;
+//  position:absolute;
+//  top:15;
+//  left:198;
+//}
+//
+//.flyout {
+//  display:none;
+//}
+//
+//.flyout-export {
+//  display:none;
+//}
+//.flyout-player {
+//  display:none;
+//}
+//.flyout-share {
+//  display:none;
+//}
+//
+//.show-share  .flyout,
+//.show-player .flyout,
+//.show-export .flyout {
+//  display:block;
+//}
+//.show-export .flyout-export {
+//  display:block;
+//}
+//.show-player .flyout-player {
+//  display:block;
+//}
+//.show-share .flyout-share {
+//  display:block;
+//}
+//
+//.topbar-menu:hover {
+//  display:block;
+//}
+
+
+
+/** EDITOR TOOLBAR AND DROP DOWN MENU ----------------**/
+.editor-toolbar {
+  width:160px;
+  display:-webkit-flex;display:flex;
+  -webkit-justify-content:space-between;justify-content: space-between;
+  -webkit-align-items:center;align-items:center;
+}
+
+.editor-toolbar .btn {
+  padding: 0px;
+  padding-top: 6px;
+  font-size:15px;
+  border: none;
+  background: none;
+}
+.editor-toolbar .btn.dropdown-toggle {
+  padding-right:0px;
+}
+
+.action-button-group .dropdown-menu {
+  width:220px; //must force it for some reason
+}
+/** MAke the bootstrap drop-down look flatter */
+//.editor-toolbar .action-button,
+//.editor-toolbar .action-button-group {
+//  border-left: 1px solid rgba(0, 0, 0, .3);
+//  cursor: pointer;
+//  float: right;
+//  font-size: 20px;
+//  padding: 4px 0;
+//  text-align: center;
+//  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+//  width: 40px;
+//}
+
+.editor-toolbar .icon-all-frames {
+  background: transparent url(../../../img/icon-frames.png) no-repeat 4px -28px;
+  height: 28px;
+}
+
+.editor-toolbar .icon-all-frames.active {
+  background-position: 4px 1px;
+}
+
+.editor-toolbar .action-button:hover,
+.editor-toolbar .btn:hover {
+  background-color: rgba(0, 0, 0, .05);
+}
+
+
+//.editor-toolbar .btn {
+//  @include box-shadow(none);
+//  background: transparent;
+//  border: none;
+//  padding-top: 8px;
+//  padding-bottom: 6px;
+//  vertical-align: top;
+//}
+
+
+
+.editor-toolbar .btn-group.open .btn.dropdown-toggle {
+  @include box-shadow(none);
+  background-color: rgba(0, 0, 0, .05);
+}
+
+//.editor-toolbar .undo {
+//  border-right: 1px solid rgba(0, 0, 0, .3);
+//}
+
+.editor-toolbar .dropdown-menu {
+  left: auto;
+  right: 0;
+  text-align: left;
+}
+
+.dropdown-menu {
+  font-size:14px;
+}
+
+.dropdown-menu .keyboard-shortcut {
+  float:right;
+}
+
+.dropdown-menu .menu-setting {
+  padding-top:3px;
+  padding-bottom:3px;
+  padding-left:20px;
+  font-weight:normal;
+  line-height:20px;
+  white-space:nowrap;
+}
+
+.padding-items .padding {
+  background: black;
+  cursor:pointer;
+}
+
+.padding-items {
+  display:-webkit-flex;display:flex;
+  -webkit-justify-content:center;justify-content:center;
+  margin: 0 20 8 20;
+}
+
+.padding-items .padding:hover {
+  color: #fff;
+  background-color: #418BB1!important;
+}
+
+.dropdown-menu .label {
+  margin:2px;
+}
+.dropdown-menu .label.inactive {
+  background-color: lightgray;
+}
+.context-menu.dropdown-menu li.disabled {
+  display:none;
+}

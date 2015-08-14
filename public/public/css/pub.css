@@ -1,0 +1,84 @@
+/* Landscape phones and down */
+@media (max-width: 991px) {
+    .image-wrapper{
+        float:right;
+    }
+}
+@media (max-width: 767px) {
+    .beta-tag{
+        display: none;
+    }
+}
+
+.pub-header {
+    display: -webkit-flex;
+    display: flex;
+    /*-webkit-align-items: center;*/
+    /*align-items: center;*/
+    background-color: #ffffff;
+    height: 44px;
+    margin-bottom: 5px;
+}
+
+.logo{
+    margin-top: -5px;
+    margin-bottom: 3px;
+}
+.pub-header > * {
+    box-sizing: border-box;
+    margin: 5px;
+}
+
+.cn-logo {
+    width: 300px;
+    height: 83px;
+    margin-top: -5px;
+}
+.row{
+    width:100%
+}
+.signin {
+    margin-left: 15px;
+}
+
+.beta-tag {
+    margin-left: 5px;
+}
+
+.cn-nav {
+    margin-left: 5px;
+}
+
+#validation-signup {
+    margin-bottom: 10px;
+}
+
+#storyboard {
+    position: relative;
+
+}
+
+.cn-nav.btn.btn-app.btn-signup {
+    margin-left: 10px;
+}
+
+.signup-icon {
+    display: inline-block;
+    font-size: 26px;
+    /*line-height: 34px;*/
+    /*width: 24px;*/
+    /*height: 26px;*/
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.about-us-row .lead {
+    margin-top:10px;
+    margin-bottom:12px;
+}
+
+.copyright-notice {
+    text-align:center;
+    font-size:10px;
+    margin-top:15px;
+}

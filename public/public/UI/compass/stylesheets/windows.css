@@ -1,0 +1,192 @@
+/* line 26, ../sass/base.scss */
+body {
+  background-color: #eeede5;
+}
+
+/*Floating menu and action configuration*/
+/* line 10, ../sass/windows.scss */
+.editor-dragging .anchored-chrome {
+  display: none;
+}
+
+/**Action configuration **/
+/* line 16, ../sass/windows.scss */
+.action-config-anchor .popover {
+  background-color: #c8fcc4;
+}
+
+/* line 19, ../sass/windows.scss */
+.action-config-anchor .popover.bottom .arrow:after {
+  border-bottom-color: #d4f7aa;
+}
+
+/* line 23, ../sass/windows.scss */
+.action-config-anchor .popover-title {
+  line-height: 25px;
+  text-align: center;
+  background-color: unset;
+  border-bottom: none;
+  padding: 0;
+  font-size: 1.3em;
+  letter-spacing: 1px;
+  margin-top: 8px;
+}
+
+/* line 34, ../sass/windows.scss */
+.popover {
+  max-width: 600px;
+}
+
+/* line 38, ../sass/windows.scss */
+.action-config {
+  width: 250px;
+  line-height: 20px;
+}
+
+/* line 42, ../sass/windows.scss */
+.action-config .action-block {
+  border-radius: 3px;
+  padding: 3px 5px;
+}
+
+/* line 46, ../sass/windows.scss */
+.action-config p {
+  height: 28px;
+}
+
+/* line 49, ../sass/windows.scss */
+.action-config select {
+  margin-bottom: 2px;
+  height: 2em;
+}
+
+/* line 53, ../sass/windows.scss */
+.action-config input {
+  margin-bottom: 2px;
+}
+
+/* line 56, ../sass/windows.scss */
+.action-config button {
+  margin-top: 10px;
+}
+
+/* line 59, ../sass/windows.scss */
+.action-config .flow-block {
+  border-radius: 3px;
+  padding: 3px 5px;
+}
+
+/* line 64, ../sass/windows.scss */
+.action-config .flow-title {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+/* line 68, ../sass/windows.scss */
+.action-config .verb {
+  width: 120px;
+  font-size: 1em;
+}
+
+/* line 72, ../sass/windows.scss */
+.action-config .flow-title {
+  width: 100%;
+}
+
+/* line 75, ../sass/windows.scss */
+.action-config .action-value {
+  width: 120px;
+}
+
+/* line 79, ../sass/windows.scss */
+.action-config .widget-name {
+  width: 120px;
+  font-size: 1em;
+}
+
+/* line 84, ../sass/windows.scss */
+.action-config.no-target .action-value {
+  width: 100%;
+}
+
+/** Action Config Buttons **/
+/* line 88, ../sass/windows.scss */
+.action-config .footer-buttons {
+  display: flex;
+}
+
+/* line 91, ../sass/windows.scss */
+.action-config .footer-buttons button span {
+  text-align: center;
+  width: 100%;
+}
+
+/* line 95, ../sass/windows.scss */
+.action-config button {
+  display: none;
+  flex: 1;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+/* line 101, ../sass/windows.scss */
+.action-config.edit-mode .apply {
+  display: inherit;
+}
+
+/* line 104, ../sass/windows.scss */
+.action-config.add-mode .add {
+  display: inherit;
+  margin-bottom: 10px;
+}
+
+/* line 108, ../sass/windows.scss */
+.action-config.add-mode .link {
+  display: inherit;
+  margin-bottom: 10px;
+}
+
+/* line 112, ../sass/windows.scss */
+.action-config.choose-mode .insert {
+  margin-bottom: 10px;
+  display: inherit;
+}
+
+/* line 116, ../sass/windows.scss */
+.action-config.choose-mode .branch {
+  margin-bottom: 10px;
+  display: inherit;
+}
+
+/* line 120, ../sass/windows.scss */
+.action-config.choose-mode .link {
+  margin-bottom: 10;
+  display: inherit;
+}
+
+/* line 125, ../sass/windows.scss */
+.action-config.may-not-apply button {
+  opacity: .5;
+}
+
+/* Error window */
+/* line 130, ../sass/windows.scss */
+.error-header {
+  background: #f1ebdd;
+  -webkit-box-shadow: -3px 0 4px #d4d3cf;
+  -moz-box-shadow: -3px 0 4px #d4d3cf;
+  box-shadow: -3px 0 4px #d4d3cf;
+  height: 35px;
+  width: 100%;
+}
+
+/* line 136, ../sass/windows.scss */
+.error-dialog .ui-dialog-titlebar {
+  display: none;
+  padding: 0;
+}
+
+/* line 140, ../sass/windows.scss */
+.hide {
+  display: none;
+}

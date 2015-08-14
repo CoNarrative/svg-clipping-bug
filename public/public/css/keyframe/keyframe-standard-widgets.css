@@ -1,0 +1,203 @@
+/*GENERAL*/
+.widget-body .backdrop {
+    fill:white;
+    stroke:white;
+}
+
+.ignore {
+    pointer-events:none;
+}
+.hit-area{
+    visibility:hidden;
+    pointer-events:all
+}
+/** Input Inset */
+.widget-body .input-inset {
+    fill:none;
+    stroke-width:1;
+    stroke:gray;
+    stroke-linecap:butt;
+    stroke-opacity:.4;
+}
+
+.widget-text .italics{
+    /*padding:5px;*/
+    font-style:italic;
+}
+
+.widget-text .bold{
+    font-weight:bold;
+}
+
+.widget-text .underlined{
+    text-decoration: underline;
+    /*text-decoration-color: black;*/
+}
+
+.body-textfield.state-focused .text-focus{
+    display: block;
+}
+
+.body-textfield .text-focus{
+    display: none;
+}
+
+/** LABEL **/
+.body-label .widget-text {
+    /*padding:5px;*/
+    padding-left:5px;
+}
+
+/** CHECKBOX **/
+
+.body-checkbox .outline {
+    border: 1px solid black;
+}
+
+
+/**BUTTON **/
+.body-button .outline {
+    fill:lightgray;
+}
+
+.widget-button-text {
+    text-align:center; font-weight: bold; color: black; font-family:Helvetica,Arial,sans-serif;
+}
+
+.body-button.state-activated .outline {
+    fill:#f8f8f8
+}
+
+/** BACK BUTTON **/
+.body-iosbutton .outline {
+    fill:url(#buttonGradient);
+    border: 0px;
+}
+
+.widget-iosbutton-text {
+    text-align:center; font-weight: bold; color: black; font-family:Helvetica,Arial,sans-serif;
+}
+
+.body-iosbutton.state-activated .outline {
+    fill:url(#buttonGradient-activated)
+}
+
+/** COMBO BOX **/
+.dropdown-box {
+    fill:url(#buttonGradient);
+}
+.dropdown-arrow{
+    fill:gray;
+}
+
+/** COMMENT **/
+.body-comment .outline {
+    fill: #fffd7a;
+    stroke:black;
+}
+
+/** IOS SWITCH **/
+.body-iosSwitch .outline {
+    border: 1px solid black;
+}
+
+.body-iosSwitch{
+    fill: #fff;
+}
+
+.body-iosSwitch .on{
+    fill: #eee;
+}
+
+.body-iosSwitch.state-activated .on {
+    fill:url(#buttonGradient);
+}
+
+.body-iosSwitch .off{
+    fill:url(#buttonGradient);
+}
+
+.body-iosSwitch.state-activated .off {
+    fill: #eee;
+}
+
+
+
+
+/**ANIMATIONS **/
+.widget,
+.surface-body *,
+.widget-body * {
+    transition: fill 1s, stroke 1s, fill-opacity 1s, stroke-opacity 1s, opacity 1s;
+    -webkit-transition: fill 1s, stroke 1s, fill-opacity 1s, stroke-opacity 1s, opacity 1s;
+}
+
+
+/*.widget rect {*/
+    /*-webkit-transition: height 1s, width 1s;*/
+/*}*/
+
+/** For foreign objects--though somehow that selector doesn't work **/
+.widget-body div,
+.widget-body div * {
+    -webkit-transition: color .5s;
+}
+
+.editor-root.animate-transitions .widget,
+.editor-root.animate-transitions .location /* Supports optional location el */
+{
+    -webkit-transition: -webkit-transform 1s;
+}
+
+.editor-root.animate-transitions .widget.off-stage,
+.editor-root.animate-transitions .off-stage {
+    opacity:0;
+}
+
+.body-icon .widget-text {
+    padding-left:4%;
+    padding-right:8%;
+    padding-bottom:8%;
+    padding-top:4%;
+}
+
+/** LOCKED **/
+.widget.locked .items *{
+    pointer-events:none!important;
+}
+
+/*.widget.locked .items .hit-area {*/
+    /*pointer-events:none;*/
+/*}*/
+
+/** FLOATING **/
+.widget.floating > .surface-body > rect,
+.widget.floating > .widget-body > rect {
+    /*filter:url(#dropshadow)*/
+    /*-webkit-svg-shadow: 0 12px 30px rgba(0,0,0,.5);*/
+    /*-webkit-filter: contrast(6.8) hue-rotate(240deg) invert(0.8);*/
+    /*filter:url(#drop-shadow-widget)*/
+}
+.float-shadow {
+    pointer-events:none !important;
+}
+
+/** SELECTED **/
+/**TODO: Figure out how to collapse some of this surface stuff up! Perhaps the surface *doesn't* draw its own rect but is always opaque?**/
+.widget-body.state-selected .surface-background{
+    fill:url(#buttonGradient)!important;
+}
+
+.selected-shim-background {
+    stroke:darkgray;
+    fill: #e7e7e7;
+}
+
+/** EXITS **/
+.widget.exit-target > .widget-body > * {
+    -webkit-svg-shadow: 0 0 26px rgba(0, 255, 0, 1);
+}
+
+.widget-body.card-not-selected > rect {
+    fill:url(#missing-context-pattern);
+}

@@ -1,0 +1,142 @@
+@import "compass/css3";
+@import "base";
+
+
+
+/*Floating menu and action configuration*/
+.anchored-chrome {
+  //pointer-events:none;
+}
+.editor-dragging .anchored-chrome{
+  display:none;
+}
+
+/**Action configuration **/
+
+.action-config-anchor .popover {
+  background-color:#C8FCC4 //same as action at bottom frame
+}
+.action-config-anchor .popover.bottom .arrow:after {
+  border-bottom-color:#d4f7aa
+}
+
+.action-config-anchor .popover-title {
+  line-height:25px;
+  text-align:center;
+  background-color:unset;
+  border-bottom:none;
+  padding: 0;
+  font-size: 1.3em;
+  letter-spacing: 1px;
+  margin-top: 8px;
+}
+
+.popover {
+  max-width:600px;
+}
+
+.action-config {
+  width:250px;
+  line-height:20px;
+}
+.action-config .action-block {
+  border-radius:3px;
+  padding:3px 5px;
+}
+.action-config p {
+  height:28px;
+}
+.action-config select {
+  margin-bottom:2px;
+  height:2em;
+}
+.action-config input {
+  margin-bottom:2px;
+}
+.action-config button {
+  margin-top:10px;
+}
+.action-config .flow-block {
+  //background-color: #eeffcf
+  border-radius:3px;
+  padding:3px 5px;
+}
+.action-config .flow-title{
+  padding-left:2px;
+  padding-right:2px;
+}
+.action-config .verb{
+  width: 120px;
+  font-size: 1em;
+}
+.action-config .flow-title {
+  width: 100%;
+}
+.action-config .action-value{
+  width:120px;
+}
+
+.action-config .widget-name{
+  width:120px;
+  font-size: 1em;
+}
+
+.action-config.no-target .action-value {
+  width:100%;
+}
+/** Action Config Buttons **/
+.action-config .footer-buttons {
+  display:flex;
+}
+.action-config .footer-buttons button span {
+  text-align:center;
+  width:100%;
+}
+.action-config button {
+  display:none;
+  flex:1;
+  margin-left:3px;
+  margin-right:3px;
+}
+.action-config.edit-mode .apply{
+  display:inherit;
+}
+.action-config.add-mode .add{
+  display:inherit;
+  margin-bottom:10px;
+}
+.action-config.add-mode .link{
+  display:inherit;
+  margin-bottom:10px;
+}
+.action-config.choose-mode .insert{
+  margin-bottom:10px;
+  display:inherit;
+}
+.action-config.choose-mode .branch{
+  margin-bottom:10px;
+  display:inherit;
+}
+.action-config.choose-mode .link{
+  margin-bottom:10;
+  display:inherit;
+}
+
+.action-config.may-not-apply button {
+  opacity:.5;
+}
+
+/* Error window */
+.error-header {
+  background: $lightBrown;
+  @include box-shadow(-3px 0 4px $box-shadow-brown);
+  height:35px;
+  width:100%;
+}
+.error-dialog .ui-dialog-titlebar {
+  display: none;
+  padding:0;
+}
+.hide {
+  display:none;
+}

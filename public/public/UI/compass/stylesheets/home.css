@@ -1,0 +1,445 @@
+/* line 26, ../sass/base.scss */
+body {
+  background-color: #eeede5;
+}
+
+/* line 4, ../sass/home.scss */
+body {
+  background-color: white;
+}
+
+/* line 8, ../sass/home.scss */
+* {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 27, ../sass/home.scss */
+.sidebar-top,
+.document-toolbar {
+  height: 45px;
+}
+
+/* line 31, ../sass/home.scss */
+.document-toolbar {
+  width: 650px;
+  margin-left: 20px;
+  margin-top: 8px;
+}
+
+/* line 38, ../sass/home.scss */
+.document-toolbar #action {
+  pointer-events: none;
+  cursor: none;
+  opacity: .5;
+}
+
+/* line 51, ../sass/home.scss */
+.document-toolbar #action.enabled {
+  pointer-events: all;
+  cursor: pointer;
+  opacity: 1;
+}
+
+/* line 57, ../sass/home.scss */
+.document-toolbar .actionbar {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 63, ../sass/home.scss */
+.document-toolbar .actionbar li {
+  line-style: none;
+  height: 40px;
+  padding: 10px;
+  float: right;
+}
+
+/* line 70, ../sass/home.scss */
+.document-table-container {
+  overflow: visible;
+  margin-left: 15px;
+}
+
+/* line 75, ../sass/home.scss */
+.documents-container {
+  vertical-align: top;
+}
+
+/* line 79, ../sass/home.scss */
+.document-table {
+  width: 650px;
+  margin-left: 20px;
+}
+
+/* line 84, ../sass/home.scss */
+.document-table tr {
+  height: 35px;
+}
+
+/* line 88, ../sass/home.scss */
+.document-table .document-name-tr, .document-table .document-name-th {
+  width: 325px;
+}
+
+/* line 100, ../sass/home.scss */
+#activeCount {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 26px;
+  height: 18;
+}
+
+/* line 110, ../sass/home.scss */
+.sidebar {
+  vertical-align: top;
+  min-width: 150px;
+}
+
+/* line 115, ../sass/home.scss */
+.sidebar .onoffswitch {
+  margin-top: 10px;
+}
+
+/* line 118, ../sass/home.scss */
+.sidebar .projects {
+  position: relative;
+  margin-top: 10px;
+  border: 1px solid #dddddd;
+  height: 100%;
+  padding: 5px;
+}
+
+/* line 126, ../sass/home.scss */
+.sidebar .projects .spacer {
+  position: absolute;
+  border-top: 1px solid #dddddd;
+  width: 140px;
+  bottom: 37;
+  left: 3;
+}
+
+/* line 133, ../sass/home.scss */
+.sidebar .projects .new {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 5px;
+  pointer-events: none;
+  cursor: none;
+  opacity: .5;
+}
+
+/* line 142, ../sass/home.scss */
+.sidebar .projects .heading span {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: bold;
+}
+
+/* line 148, ../sass/home.scss */
+.sidebar .projectitem span {
+  font-size: 12px;
+  line-height: 21px;
+}
+
+/* line 153, ../sass/home.scss */
+.sidebar .projectitem {
+  margin-left: 10px;
+  height: 23px;
+  width: auto;
+  margin-top: 3px;
+  cursor: hand;
+}
+
+/* line 161, ../sass/home.scss */
+.projectitem.selected span,
+.projectitem.selected i {
+  color: #477A95;
+  font-weight: bold;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* line 170, ../sass/home.scss */
+.sidebar .orgitem span {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+/* line 174, ../sass/home.scss */
+.sidebar .org i {
+  display: inline-block;
+  font-size: 16px;
+  -webkit-transition: -webkit-transform .3;
+  margin-right: 5px;
+}
+
+/* line 181, ../sass/home.scss */
+.sidebar .org i.expanded {
+  -webkit-transform: rotate(90deg);
+}
+
+/* line 185, ../sass/home.scss */
+.sidebar .orgitem {
+  width: auto;
+  margin-top: 3px;
+}
+
+/* line 191, ../sass/home.scss */
+.sidebar .orgitem .org {
+  cursor: hand;
+}
+
+/* line 195, ../sass/home.scss */
+.orgitem.selected span,
+.orgitem.selected i {
+  color: #477A95;
+  font-weight: bold;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* line 202, ../sass/home.scss */
+.orgitem .projectitem {
+  display: none;
+}
+
+/* line 207, ../sass/home.scss */
+.onoffswitch {
+  position: relative;
+  width: 82px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* line 212, ../sass/home.scss */
+.onoffswitch-checkbox {
+  display: none;
+}
+
+/* line 216, ../sass/home.scss */
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #999999;
+  border-radius: 19px;
+}
+
+/* line 221, ../sass/home.scss */
+.onoffswitch-inner {
+  width: 200%;
+  margin-left: -100%;
+  -moz-transition: margin 0.3s ease-in 0s;
+  -webkit-transition: margin 0.3s ease-in 0s;
+  -o-transition: margin 0.3s ease-in 0s;
+  transition: margin 0.3s ease-in 0s;
+}
+
+/* line 227, ../sass/home.scss */
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+  float: left;
+  width: 50%;
+  height: 27px;
+  padding: 0;
+  line-height: 27px;
+  font-size: 13px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 233, ../sass/home.scss */
+.onoffswitch-inner:before {
+  content: "Owned";
+  padding-left: 9px;
+  background-color: #477A95;
+  color: #FFFFFF;
+}
+
+/* line 239, ../sass/home.scss */
+.onoffswitch-inner:after {
+  content: "Shared";
+  padding-right: 9px;
+  background-color: #EEEEEE;
+  color: #999999;
+  text-align: right;
+}
+
+/* line 246, ../sass/home.scss */
+.onoffswitch-switch {
+  width: 12px;
+  margin: 7.5px;
+  background: #FFFFFF;
+  border: 2px solid #999999;
+  border-radius: 19px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 51px;
+  -moz-transition: all 0.3s ease-in 0s;
+  -webkit-transition: all 0.3s ease-in 0s;
+  -o-transition: all 0.3s ease-in 0s;
+  transition: all 0.3s ease-in 0s;
+}
+
+/* line 255, ../sass/home.scss */
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+
+/* line 259, ../sass/home.scss */
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+}
+
+/* line 1, ../sass/dialogs.scss */
+#error-modal {
+  z-index: 9999;
+}
+
+/* Document Dialog Action Menu */
+/* line 6, ../sass/dialogs.scss */
+.document-dialog,
+.project-dialog {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: none;
+  padding: 33px;
+  width: 430px;
+  height: 190px;
+  margin-top: 0px;
+  -moz-border-radius: 2px 2px 0 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px 2px 0 2px;
+  position: absolute;
+  z-index: 999999;
+  background-color: white;
+  font-size: 13px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 46px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 46px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 46px rgba(0, 0, 0, 0.3);
+}
+
+/* line 23, ../sass/dialogs.scss */
+.project-dialog h3,
+.document-dialog h3 {
+  margin-top: 0px;
+  font-size: 1.17em !important;
+}
+
+/* line 29, ../sass/dialogs.scss */
+.project-dialog button,
+.document-dialog button {
+  height: 30px;
+  width: 72px;
+}
+
+/* line 35, ../sass/dialogs.scss */
+.project-dialog h2,
+.document-dialog h2 {
+  font-size: 31.5px;
+}
+
+/* line 39, ../sass/dialogs.scss */
+.project-dialog h1, h2, h3,
+.document-dialog h1, h2, h3 {
+  line-height: 40px;
+}
+
+/* line 43, ../sass/dialogs.scss */
+.project-dialog h1 h2 h3 h4 h5 h6,
+.document-dialog h1 h2 h3 h4 h5 h6 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+/* User Presense */
+/* line 57, ../sass/dialogs.scss */
+.userpresence-dialog {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 200px;
+  height: auto;
+  margin-top: 0px;
+  -moz-border-radius: 2px 2px 0 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px 2px 0 2px;
+  position: absolute;
+  z-index: 999999;
+  background-color: white;
+  font-size: 13px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 46px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 46px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 46px rgba(0, 0, 0, 0.3);
+}
+
+/* line 72, ../sass/dialogs.scss */
+ul.userlist, ol.userlist {
+  list-style: none;
+  padding: 0px;
+}
+
+/* line 76, ../sass/dialogs.scss */
+.userlist li {
+  height: 25px;
+}
+
+/* line 81, ../sass/dialogs.scss */
+.userlist .userpresence-userpresence-name {
+  margin-left: 5px;
+}
+
+/* line 85, ../sass/dialogs.scss */
+.userlist span {
+  vertical-align: middle;
+}
+
+/* line 88, ../sass/dialogs.scss */
+.userlist #status-icon,
+.userlist #location-icon {
+  float: right;
+  margin-right: 10px;
+  margin-top: 4px;
+}
+
+/* line 97, ../sass/dialogs.scss */
+.userlist .icon-location-arrow:hover {
+  cursor: hand;
+  text-shadow: 3px 3px 3px #999999;
+}
+
+/* line 103, ../sass/dialogs.scss */
+.timeline-branchchooser-dialog {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: none;
+  width: 300px;
+  height: auto;
+  margin-top: 0px;
+  -moz-border-radius: 2px 2px 0 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px 2px 0 2px;
+  position: absolute;
+  z-index: 999999;
+  background-color: white;
+  font-size: 13px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}

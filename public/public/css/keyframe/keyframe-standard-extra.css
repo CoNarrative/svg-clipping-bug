@@ -1,0 +1,27 @@
+.switchable-nav-tab text {
+    fill:black;
+    fill-opacity:1;
+    font-size:12px;
+    text-anchor:middle;
+}
+.widget-body text {
+    /*fill:black;*/
+    /*font-size:14px;*/
+    /*text-anchor:start;*/
+    stroke-width:0;
+    user-select:none;
+}
+.widget-body .widget-buttontext{
+    text-anchor:middle;
+}
+svg {
+    width:100%;
+    height:100%;
+}
+/*.editor-root svg {*/
+    /*height: 4000px;*//*Have to force it for firefox...*/
+/*}*/
+
+.switchable-nav-tab text {
+    pointer-events:none;
+}

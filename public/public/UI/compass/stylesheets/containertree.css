@@ -1,0 +1,273 @@
+/* line 1, ../sass/containertree.scss */
+.left-pullout {
+  position: absolute;
+  z-index: 10001;
+  top: 0px;
+  background: white;
+  border-right: 1px #DADADA solid;
+  left: 0px;
+  height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  width: 200px;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+
+/* line 13, ../sass/containertree.scss */
+.container-tree {
+  margin-top: 42px;
+  padding: 4px;
+  user-select: none;
+  -webkit-user-select: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  pointer-events: all;
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+/* line 24, ../sass/containertree.scss */
+.container-tree-spacer {
+  flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+  height: 55px;
+}
+
+/** NODES **/
+/* line 29, ../sass/containertree.scss */
+.container-tree:not(.tree-expanded) .container-node:not(.screens):not(.root) {
+  display: none !important;
+}
+
+/* line 33, ../sass/containertree.scss */
+.container-node.collapsed > .container-node-body .node-expander {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+
+/* line 38, ../sass/containertree.scss */
+.container-node.no-children > .container-node-body .node-expander {
+  visibility: hidden;
+}
+
+/* line 42, ../sass/containertree.scss */
+.container-node.collapsed > .container-node-children {
+  height: 0px;
+  display: none;
+}
+
+/* line 47, ../sass/containertree.scss */
+.node-expander {
+  margin-right: 6px;
+  font-size: 20px !important;
+  pointer-events: all !important;
+  cursor: pointer !important;
+}
+
+/* line 56, ../sass/containertree.scss */
+.container-node {
+  padding-left: 10px;
+}
+
+/* line 59, ../sass/containertree.scss */
+.container-node.root {
+  padding-left: 0px;
+}
+
+/* line 62, ../sass/containertree.scss */
+.container-node.root > .container-node-children > .container-node {
+  padding-left: 0px;
+}
+
+/* line 65, ../sass/containertree.scss */
+.container-node-body {
+  display: flex;
+  display: -webkit-flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: white;
+  padding: 0px 2px 0px 2px;
+  width: 100%;
+}
+
+/* line 75, ../sass/containertree.scss */
+.root > .container-node-body {
+  display: none;
+}
+
+/* line 79, ../sass/containertree.scss */
+.container-node.selected > .container-node-body {
+  background-color: #d7e1e6;
+}
+
+/** child bodies that are off-screen and NOT under a switch panel
+/**backgrounds off of inactive panels in a switcher **/
+/* line 85, ../sass/containertree.scss */
+.container-node.in-switcher:not(.active-card) > .container-node-body {
+  background-color: #fcfcfc;
+}
+
+/** widget names directly under an off-screen container */
+/* line 89, ../sass/containertree.scss */
+.container-node:not(.on-screen) > .container-node-body .widget-name {
+  opacity: 0.4;
+}
+
+/* line 92, ../sass/containertree.scss */
+.container-node.in-switcher:not(.active-card) > .container-node-body .widget-name {
+  opacity: 0.4;
+}
+
+/*panels in a switch panel **/
+/* line 96, ../sass/containertree.scss */
+.container-node.in-switcher > .container-node-body {
+  cursor: auto;
+}
+
+/**Regular nodes**/
+/*Regular node bodies**/
+/** INTERIOR STYLING **/
+/* line 114, ../sass/containertree.scss */
+.switch {
+  opacity: 1 !important;
+  pointer-events: all;
+  cursor: pointer !important;
+}
+
+/*intro ones...*/
+/* line 123, ../sass/containertree.scss */
+.container-node .fa-circle-o,
+.container-node .fa-circle,
+.container-node .fa-bars {
+  margin-right: 2px;
+}
+
+/* Can't remove/switch unless in edit mode...*/
+/* line 128, ../sass/containertree.scss */
+.switching-off .container-node .fa-minus-circle {
+  visibility: hidden;
+}
+
+/* line 133, ../sass/containertree.scss */
+.switching-off .container-node .add-view,
+.switching-off .container-node .switch {
+  pointer-events: none;
+  opacity: 0.4 !important;
+}
+
+/* line 137, ../sass/containertree.scss */
+.switching-off .container-node .switch.fa-circle-o {
+  pointer-events: none;
+  opacity: 0.1 !important;
+}
+
+/* line 143, ../sass/containertree.scss */
+.container-node.root > .container-node-children > .container-node > .container-node-body .delete-view {
+  display: none;
+}
+
+/* line 147, ../sass/containertree.scss */
+.container-node .fa {
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  margin-top: 2px;
+  font-size: 14px;
+}
+
+/* line 154, ../sass/containertree.scss */
+.container-node .add-view {
+  margin-left: 0px;
+  margin-right: 2px;
+}
+
+/* line 158, ../sass/containertree.scss */
+.container-node .flex-spacer {
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+/* line 162, ../sass/containertree.scss */
+.container-node .editable-buttons {
+  display: none;
+}
+
+/* line 165, ../sass/containertree.scss */
+.container-node .container-node-body .editable-click {
+  border-bottom: none;
+}
+
+/* line 169, ../sass/containertree.scss */
+.container-node .container-node-body .edit-view,
+.container-node .container-node-body .delete-view {
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
+/* line 175, ../sass/containertree.scss */
+.container-node .container-node-body .delete-view {
+  color: #ff9492;
+  margin-left: 5px;
+}
+
+/* line 181, ../sass/containertree.scss */
+.container-node .container-node-body:hover .edit-view,
+.container-node .container-node-body:hover .delete-view {
+  opacity: 1;
+}
+
+/* line 185, ../sass/containertree.scss */
+.container-tree .panel-symbol {
+  margin-right: 2px;
+}
+
+/* line 188, ../sass/containertree.scss */
+.frame-changes-holder {
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-flex: 0.5;
+  flex: 0.5;
+  border-top: 1px solid gray;
+  padding: 8px;
+  margin-top: 4px;
+}
+
+/* line 197, ../sass/containertree.scss */
+.frame-changes-holder h5 {
+  margin-top: 0px;
+}
+
+/* line 200, ../sass/containertree.scss */
+.container-tree .w-name-input {
+  width: 100%;
+}
+
+/* line 204, ../sass/containertree.scss */
+.container-node {
+  border: solid 1px rgba(255, 255, 255, 0);
+}
+
+/* line 207, ../sass/containertree.scss */
+.container-tree .widget-name {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* line 214, ../sass/containertree.scss */
+.container-tree .active-container {
+  border: solid 1px black;
+}
+
+/* line 217, ../sass/containertree.scss */
+.container-tree .target-container > .container-node-body {
+  background-color: lightblue;
+}

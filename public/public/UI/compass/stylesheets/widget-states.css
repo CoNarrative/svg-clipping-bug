@@ -1,0 +1,13 @@
+/** DISABLED STATE**/
+/* line 2, ../sass/widget-states.scss */
+.widget-state-disabled {
+  /** Use fill and stroke to avoid messing with embedded divs, etc. which produce a strange error of text going to upper left**/
+  fill-opacity: .4;
+  stroke-opacity: .4;
+}
+
+/** HIDDEN STATE **/
+/* line 9, ../sass/widget-states.scss */
+.widget-state-hidden {
+  opacity: .05;
+}

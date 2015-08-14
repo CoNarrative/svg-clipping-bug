@@ -5,6 +5,7 @@ var sampleEvery = 1;
 var accumulated = 0;
 var samples = [];
 var removeClipping = false;
+var frameIds = ["eternal", "launch", "300e6bea-cc3c-46eb-a65e-010d943f2bbb", "e2354a77-d92b-489f-8bc3-fc7ffacb1c73", "a06e8505-999d-4ce2-a117-f92e83618ee3", "4caa2135-46a0-4bd8-a3f8-145f58cee7db", "0fefc2f2-6368-45a8-9f59-c849136fa1b3", "a30130bf-e66d-467d-867f-b2129f24125a", "234467c0-755a-4c41-8d0b-2b3182fde130", "0f3f82e0-d739-4c81-afe3-7b449e0e0178"]
 
 var frameHolderTemplate=document.getElementById('frame-holder-template');
 var frameTemplate =document.getElementById('frame-template');

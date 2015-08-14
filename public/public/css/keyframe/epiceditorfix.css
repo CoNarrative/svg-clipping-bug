@@ -1,0 +1,56 @@
+
+.epiceditor-preview ol {
+    list-style:decimal!important;
+}
+
+.epiceditor-preview ul {
+    list-style:inherit!important;
+}
+
+.epiceditor-preview li {
+    list-style-type:inherit!important;
+}
+
+.epiceditor-preview p, .epiceditor-preview blockquote, .epiceditor-preview ul, .epiceditor-preview ol,
+.epiceditor-preview dl, .epiceditor-preview li, .epiceditor-preview table, .epiceditor-preview pre {
+    margin: .2em .7em;
+}
+
+.epiceditor-preview .highlight pre, .epiceditor-preview pre{
+    font-size:.9em;
+    line-height:1.2em;
+}
+
+blockquote p {
+    font-size:1em;
+}
+
+.epiceditor-preview strong {
+    font-weight:bold;
+}
+
+.epiceditor-preview em {
+    font-style:italic;
+}
+
+.epiceditor-preview h1 {
+    font-size:2em;
+}
+
+.epiceditor-preview h2 {
+    font-size:1.71em;
+}
+
+.epiceditor-preview h3 {
+    font-size:1.29em;
+}
+
+.epiceditor-preview h4 {
+    font-size:1.14em;
+}
+.epiceditor-preview h5 {
+    font-size:1em;
+}
+.epiceditor-preview h6 {
+    font-size:1em;
+}

@@ -1,0 +1,5 @@
+/** DISABLED STATE**/
+.state-disabled.widget {
+  /** Use fill and stroke to avoid messing with embedded divs, etc. which produce a strange error of text going to upper left**/
+  fill-opacity: .4;
+  stroke-opacity: .4; }

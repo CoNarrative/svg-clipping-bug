@@ -1,0 +1,107 @@
+ol.frame-script, ul.frame-script {
+  padding: 0px;
+}
+
+.frame-script-container {
+  height: 50%;
+  position: relative;
+}
+
+.frame-script-container .panel-heading {
+  position: absolute;
+  //height: 33px;
+  //line-height: 33px;
+  height:16px;
+  width: 250px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: $superLightBrown;
+  @include box-shadow(#C4C1BC 0 3px 4px);
+}
+
+.frame-script-pad {
+  padding: 16px 0 0;
+  height: 100%;
+}
+
+div.frame-script {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+  padding: 5px 4px 0px 6px;
+}
+
+.frame-script {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.frame-script li {
+  padding: 5px 8px 4px 6px;
+  line-height: 13px;
+  position: relative;
+}
+
+//.frame-script li:not(:first-child) {
+//  border-top: 1px solid rgba(0, 0, 0, .1);
+//}
+
+.delta-widgetName {
+  color: #59b9e6
+}
+
+.delta-property {
+  font-style: italic
+}
+
+.delta-value {
+  background-color:lightgoldenrodyellow;
+}
+
+.delta-verb {
+  color: #688c07;
+}
+
+.frame-script {
+  pointer-events:auto;
+  cursor:pointer;
+  font-size:12px;
+}
+
+.frame-script .action {
+  @include transition(color .3s ease);
+  cursor: pointer;
+  //position: absolute;
+  //top: 8px;
+  //margin-top:8px;
+  //left: 0;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.frame-script .delete {
+  position: absolute;
+  right: 0;
+  top: 8px;
+}
+
+.player-mode .delete {
+  display:none;
+}
+
+.pushback-blocked .pushback{
+  display:none;
+}
+
+.frame-script .pushback {
+  margin-left:-9px;
+}
+
+.frame-script .action:hover {
+  color: darkred;
+}
+
+li.framedelta.dead-reference :not(.delete){
+  text-decoration:line-through;
+}

@@ -1,0 +1,239 @@
+.navbar-fixed-top {
+    /*background-color: rgba(255, 255, 255, 0.90);*/
+    background-color: #f7f7f7;
+    background-image: none;
+}
+
+/*a[name] {*/
+a[id] {
+    display: block;
+    position: relative;
+    top: -50px;
+    visibility: hidden;
+}
+#contact {
+    top:0px;
+}
+
+.my-navbar-list a {
+    color: #477A95 !important;
+}
+
+.my-navbar-list .call-to-action a {
+    color: #f05a28 !important;
+}
+
+.my-navbar-list a:hover {
+    text-decoration: underline !important;
+}
+
+.nav-pad {
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+.blue {
+    background-color: rgba(71, 122, 149, 1);
+    color: white;
+}
+
+.white {
+    color: #454545;
+    background-image: url(/public/img/enterprise-ux-background.jpg);
+    background-size: cover;
+}
+
+.contact-rep {
+    margin: 10px;
+}
+
+.header {
+    font-family: "Open Sans Condensed";
+    font-weight: 100;
+    font-style: normal;
+    font-variant: normal;
+    font-size: 40px;
+}
+
+.row-header {
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    font-size: 26px;
+    padding-top: 15px;
+    color: #477A95;
+}
+
+.row-header-2 {
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    font-size: 38px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    color: #477A95;
+    text-align: center;
+}
+
+.row-sub-head {
+    font-family: "Open Sans";
+    font-weight: 100;
+    font-style: normal;
+    font-variant: normal;
+    font-size: 24px;
+    padding-top: 15px;
+    color: #f05a28;
+}
+
+.sub-head-content {
+    font-family: "Open Sans";
+    font-weight: 100;
+    font-style: normal;
+    font-variant: normal;
+    font-size: 16px;
+    padding-top: 15px;
+    color: #477A95;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.padding-row {
+    /*padding-top: 20px;*/
+    padding-bottom: 20px;
+}
+
+.body {
+    position: relative;
+    font-family: "Open Sans Condensed";
+    font-weight: 100;
+    font-style: normal;
+    font-variant: normal;
+    font-size: 26px;
+    color: #477a95;
+}
+
+#header-image {
+    margin-top: 75px;
+    margin-bottom: 60px;
+    /*padding-right: 20px;*/
+}
+
+.gray {
+    background-color: #f7f7f7;
+}
+
+.btn-conar {
+    color: #fff;
+    background-color: #f05a28;
+    border-color: #f77145;
+}
+
+.btn-conar:hover,
+.btn-conar:focus,
+.btn-conar.focus,
+.btn-conar:active,
+.btn-conar.active,
+.open > .dropdown-toggle.btn-conar {
+    color: #fff;
+    background-color: #f06122;
+    border-color: #ffffff;
+}
+
+.feature-chunk {
+    border-bottom: 1px solid #d7d7d7;
+    padding-bottom: 80px;
+}
+
+.pill {
+    width: 280px;
+    /*height: 116px;*/
+    height:0px;
+    border: solid 2px white;
+    border-radius: 58px;
+    text-align: center;
+    line-height: 108px;
+    font-family: 'Open Sans Condensed';
+    font-size: 80px;
+    color: white;
+    background-color: #6390CB;
+    -webkit-transition: -webkit-transform .5s, transform .5s;
+    transition: -webkit-transform .5s, transform .5s;
+}
+
+.nav-foot {
+    padding-top: 20px;
+    background-color: rgba(71, 122, 149, 1);
+    color: white;
+    height: 400px;
+}
+
+.corp-info {
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+.contact {
+    padding-top: 15px;
+    padding-bottom: 30px;
+    text-decoration: none;
+    color: white;
+    font-family: "Open Sans Condensed";
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.social-media {
+    padding-top: 15px;
+    padding-bottom: 30px;
+    font-size: 18px;
+    letter-spacing: 6px;
+    text-decoration: none;
+    color: white;
+}
+
+.social-media i {
+    color:white;
+}
+
+.social-media a:hover,
+.social-media a:hover i {
+    color: #f05a28 !important;
+    text-decoration: none;
+}
+
+.contact-email {
+    text-decoration: none;
+    color: white;
+    font-family: "Open Sans Condensed";
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+
+.quote{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.quote-chunk {
+    border-bottom: 1px solid #d7d7d7;
+    padding-bottom: 10px;
+}
+
+.spy{
+    height: 0px;
+    background-color: rgba(71, 122, 149, 1);
+}
+
+.gif-layout{
+    padding-top: 25px;
+}
+
+.feature-padding{
+    padding-top: 65px;
+
+}

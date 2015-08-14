@@ -1,0 +1,712 @@
+/* line 26, ../sass/base.scss */
+body {
+  background-color: #eeede5;
+}
+
+/** RESET LI since we use it semantically */
+/* line 6, ../sass/palette.scss */
+.palette ul,
+.palette ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* line 10, ../sass/palette.scss */
+.palette-nav-tabs {
+  margin: 8px 0 0;
+  width: 250px;
+  height: 28px;
+}
+
+/* line 16, ../sass/palette.scss */
+.palette-nav-tabs li {
+  list-item-type: none;
+  line-height: 13px;
+  display: inline-block;
+  padding-right: 0;
+  cursor: -webkit-grab;
+}
+
+/* line 24, ../sass/palette.scss */
+.palette-nav-tabs li a {
+  color: #636059;
+  display: block;
+  font-size: 12px;
+  margin: 5px 0;
+  padding: 6px 3px;
+  text-decoration: none;
+}
+
+/* line 33, ../sass/palette.scss */
+.palette-nav-tabs li a.active {
+  -webkit-box-shadow: 3px 0 4px #d4d3cf;
+  -moz-box-shadow: 3px 0 4px #d4d3cf;
+  box-shadow: 3px 0 4px #d4d3cf;
+  background: #f1ebdd;
+}
+
+/* line 38, ../sass/palette.scss */
+section.storyboard {
+  z-index: 1;
+}
+
+/* line 42, ../sass/palette.scss */
+.left-panel-title {
+  cursor: pointer;
+}
+
+/* line 46, ../sass/palette.scss */
+.left-panel-title [class^=icon-] {
+  -webkit-transition: -webkit-transform 1s;
+  -moz-transition: -moz-transform 1s;
+  -o-transition: -o-transform 1s;
+  transition: transform 1s;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/* line 52, ../sass/palette.scss */
+.tools-panel {
+  -webkit-box-shadow: -3px 0 4px #d4d3cf;
+  -moz-box-shadow: -3px 0 4px #d4d3cf;
+  box-shadow: -3px 0 4px #d4d3cf;
+  -webkit-transition-property: width, padding;
+  -moz-transition-property: width, padding;
+  -o-transition-property: width, padding;
+  transition-property: width, padding;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-user-select: none;
+  user-select: none;
+  background: #f1ebdd;
+  width: 250px;
+  padding: 10px;
+  overflow: hidden;
+  overflow-y: auto;
+  height: 100%;
+  z-index: 1;
+  position: relative;
+}
+
+/* line 68, ../sass/palette.scss */
+body.elements-hidden .tools-panel {
+  width: 0;
+  padding: 10px 0;
+  overflow: hidden;
+}
+
+/* line 74, ../sass/palette.scss */
+body.elements-hidden .left-panel-title [class^=icon-] {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+/* line 78, ../sass/palette.scss */
+.tools-panel-tabs {
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  height: 30px;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+/* line 85, ../sass/palette.scss */
+.tools-panel-tabs li {
+  margin: 3px;
+  padding: 3px;
+}
+
+/* line 89, ../sass/palette.scss */
+.tools-panel-tabs li a {
+  color: #636059;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+/* line 94, ../sass/palette.scss */
+.tools-panel-tabs li.active {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  background: #fffcf5;
+}
+
+/* line 98, ../sass/palette.scss */
+.palette ul.tab {
+  display: none;
+}
+
+/* line 102, ../sass/palette.scss */
+.palette ul.active {
+  display: inherit;
+}
+
+/* line 105, ../sass/palette.scss */
+.palette .tab {
+  display: none;
+}
+
+/* line 109, ../sass/palette.scss */
+.palette .tab.active {
+  display: inherit;
+}
+
+/** WIDGET LIST ------------------------------------**/
+/* line 119, ../sass/palette.scss */
+.widget-list.active {
+  display: -webkit-flex !important;
+  display: flex !important;
+}
+
+/* line 122, ../sass/palette.scss */
+.widget-list {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 10px;
+  align-content: flex-start;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+/* line 128, ../sass/palette.scss */
+.widget-list li {
+  cursor: -webkit-grab;
+  height: 58px;
+  width: 58px;
+  padding: 10px 2px 5px 2px;
+  margin: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  text-align: center;
+  font-size: 9.2px;
+  background-color: unset !important;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  overflow: hidden;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+/* line 146, ../sass/palette.scss */
+.widget-list li:hover {
+  cursor: -webkit-grab;
+}
+
+/* line 150, ../sass/palette.scss */
+.widget-list li.not-implemented {
+  display: none;
+}
+
+/* line 155, ../sass/palette.scss */
+.widget-list li:active {
+  cursor: -webkit-grabbing;
+}
+
+/* line 160, ../sass/palette.scss */
+.widget-list li i {
+  pointer-events: none;
+  /* Make it easier on the drag by making this a "ghost" */
+  height: 28px;
+  width: auto;
+  margin: 0 auto;
+  background: transparent url(../../../img/palette-icons.png) no-repeat 50px 0;
+}
+
+/* line 169, ../sass/palette.scss */
+.widget-list li span {
+  pointer-events: none;
+}
+
+/* line 173, ../sass/palette.scss */
+.widget-list li[dragging] {
+  background: #fffcf5;
+}
+
+/* ICONS LIST ------------------------------------**/
+/* line 180, ../sass/palette.scss */
+.icons-palette.active,
+.icons-palette.active .icons-list {
+  display: -webkit-flex !important;
+  display: flex !important;
+}
+
+/* line 183, ../sass/palette.scss */
+.icons-palette {
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  overflow-y: scroll !important;
+}
+
+/* line 188, ../sass/palette.scss */
+.icons-list {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+/* line 192, ../sass/palette.scss */
+.icons-list li {
+  cursor: -webkit-grab;
+  height: 30px;
+  width: 30px;
+  margin: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 10px;
+  color: #565656;
+}
+
+/* line 202, ../sass/palette.scss */
+.icons-list li i {
+  pointer-events: none;
+}
+
+/* line 206, ../sass/palette.scss */
+.icons-list li:hover {
+  cursor: -webkit-grab;
+}
+
+/* line 210, ../sass/palette.scss */
+.icons-list li:active {
+  cursor: -webkit-grabbing;
+}
+
+/* line 213, ../sass/palette.scss */
+.icons-list-holder {
+  margin-top: 10px;
+}
+
+/** SEARCH BOX **/
+/* line 217, ../sass/palette.scss */
+.search-icons {
+  margin: 10px 6px;
+  height: 23px;
+  min-height: 23px;
+  display: flex;
+  align-items: stretch;
+}
+
+/* line 224, ../sass/palette.scss */
+.search-icons input {
+  flex: 1;
+}
+
+/* line 227, ../sass/palette.scss */
+.search-icons .clear-search {
+  margin: 0;
+  cursor: pointer;
+  border: solid 1px lightgray;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* line 234, ../sass/palette.scss */
+.search-icons .clear-search i {
+  line-height: 23px;
+  margin: 0px 4px;
+}
+
+/* IMAGES  ------------------------------------**/
+/* line 241, ../sass/palette.scss */
+.images-palette.active,
+.images-palette.active .images-list {
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* line 245, ../sass/palette.scss */
+.images-palette {
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+/* line 249, ../sass/palette.scss */
+.tools-panel .progress-bar {
+  background-color: blue;
+  height: 10px;
+  -webkit-transition: width 0.1s;
+  -moz-transition: width 0.1s;
+  -o-transition: width 0.1s;
+  transition: width 0.1s;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+}
+
+/* line 256, ../sass/palette.scss */
+.images-list {
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/* line 260, ../sass/palette.scss */
+.images-list li {
+  list-item-type: none;
+  margin-bottom: 10px;
+  width: 90px;
+  height: 90px;
+  cursor: -webkit-grab;
+}
+
+/* line 269, ../sass/palette.scss */
+.images-list img {
+  pointer-events: none;
+}
+
+/* line 273, ../sass/palette.scss */
+#image-drop-zone {
+  margin-top: 8px;
+  border: 4px dashed #ccc;
+  text-align: center;
+  height: 50px;
+}
+
+/* line 280, ../sass/palette.scss */
+#image-drop-zone p {
+  line-height: normal;
+}
+
+/* line 284, ../sass/palette.scss */
+.upload_button_holder {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+/* line 290, ../sass/palette.scss */
+.upload_button_holder .upload_button {
+  line-height: normal;
+  font-weight: bold;
+  font-size: 13px;
+  background-color: #0f61ac;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 5px 0;
+  border: 1px solid #000;
+  border-radius: 4px;
+  width: 100px;
+  height: 18px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* line 308, ../sass/palette.scss */
+.upload_button_holder:hover .upload_button {
+  background-color: #1185f0;
+}
+
+/* line 313, ../sass/palette.scss */
+.upload_button_holder .cloudinary-fileupload {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* line 327, ../sass/palette.scss */
+.palette .palette-lock {
+  font-size: 20px;
+}
+
+/* line 330, ../sass/palette.scss */
+.images-palette .library-title {
+  margin: 6px 2px 0px 2px;
+  text-align: center;
+}
+
+/* line 334, ../sass/palette.scss */
+.images-list .remove {
+  color: red;
+  position: relative;
+  z-index: 1000;
+  left: 72px;
+  top: 20px;
+  font-size: 20px;
+  visibility: hidden;
+}
+
+/* line 343, ../sass/palette.scss */
+.images-list li img {
+  width: 90px !important;
+  height: 90px !important;
+}
+
+/* line 347, ../sass/palette.scss */
+.palette.unlocked .images-list .remove {
+  visibility: inherit;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+/* line 352, ../sass/palette.scss */
+.palette.unlocked .images-list li {
+  list-item-type: none;
+  pointer-events: none;
+}
+
+/**TEMPLATES LIST ------------------------------------**/
+/* line 360, ../sass/palette.scss */
+.elements-templates li {
+  background-color: unset !important;
+  border-radius: 3px;
+  list-items-type: none;
+  cursor: -webkit-grab;
+  display: block;
+  float: left;
+  height: 58px;
+  width: 58px;
+  padding: 10px;
+  margin: 6px 0 0 6px;
+  text-align: center;
+  font-size: 9.2px;
+  position: relative;
+  -webkit-user-drag: element;
+}
+
+/* line 377, ../sass/palette.scss */
+.elements-templates li:hover {
+  cursor: -webkit-grab;
+}
+
+/* line 381, ../sass/palette.scss */
+.elements-templates li:active {
+  cursor: -webkit-grabbing;
+}
+
+/* line 385, ../sass/palette.scss */
+.elements-templates li i {
+  pointer-events: none;
+}
+
+/* line 390, ../sass/palette.scss */
+.elements-templates li i {
+  pointer-events: none;
+  /* Make it easier on the drag by making this a "ghost" */
+  display: block;
+  height: 28px;
+  width: auto;
+  margin: 0 auto;
+  background: transparent url(../../../img/palette-icons.png) no-repeat 50px 0;
+}
+
+/* line 400, ../sass/palette.scss */
+.elements-templates .icon-remove {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+/* line 404, ../sass/palette.scss */
+.elements-templates li input {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+/* line 409, ../sass/palette.scss */
+.elements-templates.unlocked li i {
+  pointer-events: auto;
+}
+
+/* line 412, ../sass/palette.scss */
+.elements-templates.unlocked .icon-remove {
+  opacity: 1;
+}
+
+/* line 415, ../sass/palette.scss */
+.elements-templates li.editing input {
+  width: 75px;
+  opacity: 1;
+}
+
+/* line 419, ../sass/palette.scss */
+.elements-templates li.editing span {
+  opacity: 0;
+}
+
+/* line 423, ../sass/palette.scss */
+li i.box-icon {
+  background-position: 0 2px;
+  width: 19px;
+}
+
+/* line 428, ../sass/palette.scss */
+li i.button-icon {
+  background-position: -19px 0;
+  height: 14px;
+  width: 26px;
+  margin-top: 5px;
+}
+
+/* line 435, ../sass/palette.scss */
+li i.toolbar-icon {
+  background-position: -46px 0;
+  width: 29px;
+  height: 8px;
+  margin-top: 7px;
+}
+
+/* line 442, ../sass/palette.scss */
+li i.checkbox-icon {
+  background-position: -75px 0;
+  width: 24px;
+  margin-top: 7px;
+}
+
+/* line 448, ../sass/palette.scss */
+li i.combobox-icon {
+  background-position: -100px 0;
+  width: 32px;
+}
+
+/* line 453, ../sass/palette.scss */
+li i.image-icon {
+  background-position: -131px 0;
+  width: 28px;
+  margin-top: 4px;
+}
+
+/* line 459, ../sass/palette.scss */
+li i.horizline-icon {
+  background-position: -304px 6px;
+  width: 16px;
+}
+
+/* line 464, ../sass/palette.scss */
+li i.vertline-icon {
+  background-position: -298px 6px;
+  width: 4px;
+}
+
+/* line 469, ../sass/palette.scss */
+li i.link-icon {
+  background-position: -320px 0;
+  width: 24px;
+  margin-top: 4px;
+}
+
+/* line 475, ../sass/palette.scss */
+li i.linkbar-icon {
+  background-position: -343px 0;
+  width: 37px;
+  margin-top: 10px;
+}
+
+/* line 481, ../sass/palette.scss */
+li i.list-icon {
+  background-position: -378px 0;
+  width: 27px;
+  margin-top: 6px;
+}
+
+/* line 487, ../sass/palette.scss */
+li i.panel-icon {
+  background-position: -404px 0;
+  width: 30px;
+  margin-top: 5px;
+}
+
+/* line 493, ../sass/palette.scss */
+li i.paragraph-icon {
+  background-position: -433px 4px;
+  width: 19px;
+}
+
+/* line 498, ../sass/palette.scss */
+li i.scrollbar-vertical-icon {
+  background-position: -473px 0;
+  width: 14px;
+}
+
+/* line 503, ../sass/palette.scss */
+li i.searchbox-icon {
+  background-position: -486px 3px;
+  width: 33px;
+}
+
+/* line 508, ../sass/palette.scss */
+li i.shape-icon {
+  background-position: -518px 4px;
+  width: 22px;
+}
+
+/* line 513, ../sass/palette.scss */
+li i.tabs-icon {
+  background-position: -541px 7px;
+  width: 29px;
+}
+
+/* line 518, ../sass/palette.scss */
+li i.label-icon {
+  background-position: -570px 9px;
+  width: 33px;
+}
+
+/* line 523, ../sass/palette.scss */
+li i.textfield-icon {
+  background-position: -601px 2px;
+  width: 34px;
+}
+
+/* line 528, ../sass/palette.scss */
+li i.iosbutton-icon {
+  background-position: -218px 3px;
+  width: 27px;
+}
+
+/* line 533, ../sass/palette.scss */
+li i.iosmenu-icon {
+  background-position: -158px 5px;
+  width: 20px;
+}
+
+/* line 538, ../sass/palette.scss */
+li i.circle-icon {
+  background-position: -518px 7px;
+  width: 22px;
+}
+
+/* line 543, ../sass/palette.scss */
+li i.iosalert-icon {
+  background-position: -178px 4px;
+  width: 21px;
+}
+
+/* line 549, ../sass/palette.scss */
+li i.iosSwitch-icon {
+  background-position: -265px 1px;
+  width: 33px;
+}

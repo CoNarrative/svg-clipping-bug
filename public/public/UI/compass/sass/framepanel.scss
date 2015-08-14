@@ -1,0 +1,40 @@
+.left-panel {
+  @include box-shadow(3px 0 4px $box-shadow-brown);
+  background: #e8e8e8;
+  width: $toolsPanelWidth;
+  float: left;
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+}
+
+.left-panel-title {
+  width: $toolsPanelWidth;
+}
+
+.work-area > .left-panel {
+  @include transition-property(width, padding);
+  @include transition-duration(.5s);
+}
+
+body.frames-hidden .work-area > .left-panel {
+  width: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.nav-sections .tools-panel-title [class^="icon-"] {
+  @include transition(transform 1s);
+  display: inline-block;
+  margin-left: 5px;
+}
+
+body.frames-hidden .nav-sections .tools-panel-title [class^="icon-"] {
+  @include transform(rotate(180deg));
+}
+
+//TODO : GRAND HACK!
+.player-mode .work-area {
+  margin-left:-8px;
+  margin-right:-8px;
+}
