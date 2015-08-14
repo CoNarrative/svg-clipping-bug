@@ -1,12 +1,18 @@
 var svgns = "http://www.w3.org/2000/svg";
-var framesInStory = 50;
-var numberOfUpdates = 1000;
-var sampleEvery = 20;
+var framesInStory = 10;
+var numberOfUpdates = 20;
+var sampleEvery = 2;
 var accumulated = 0;
 var samples = [];
 
 var frameHolderTemplate=document.getElementById('frame-holder-template');
-var frameTemplate =document.getElementById('frame-template');
+var frameTemplate =document.getElementById('frame-template-svg-root');
+//not really a template right now...
+var clipPaths = frameTemplate.querySelectorAll('clipPath');
+for (var i=0;i<clipPaths.length;i++){
+    clipPaths[i].remove();
+}
+
 
 document.body.innerHTML = '<svg id="frame-thumbnails" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%"></svg>'
 
@@ -41,7 +47,8 @@ var intervalId = setInterval(function () {
 }, 45);
 
 function generateDeviceNode(){
-    return document.importNode(frameTemplate.content,true).querySelector('.widget-device');
+    return frameTemplate.cloneNode(true).querySelector('.widget-device');
+    //return document.importNode(frameTemplate.content,true).querySelector('.widget-device');
 }
 
 function setFrame(j){
