@@ -1,4 +1,4 @@
-var numberOfUpdates = 10;
+var numberOfUpdates = 5;
 var sampleEvery = 1;
 var accumulated = 0;
 var samples = [];
