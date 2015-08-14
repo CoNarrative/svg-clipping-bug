@@ -1,142 +1,142 @@
-/*/!* line 1, ../sass/poster.scss *!/*/
-/*.poster-view {*/
-  /*background-color: #f8f8f8;*/
-  /*left: 0;*/
-  /*top: 0;*/
-  /*position: absolute;*/
-  /*height: 100%;*/
-  /*width: 100%;*/
-  /*z-index: 9000;*/
-  /*-webkit-user-select: none;*/
-  /*user-select: none;*/
-/*}*/
-
-/*/!* line 18, ../sass/poster.scss *!/*/
-/*.intercom-launcher-button {*/
-  /*transform: scale(0.6) translate(4px, 19px) !important;*/
-/*}*/
-
-/*/!* line 23, ../sass/poster.scss *!/*/
-/*.poster-view .timeline-guide {*/
-  /*stroke-dasharray: 10, 10;*/
-  /*stroke-width: 3;*/
-  /*stroke: lightgray;*/
-/*}*/
-
-/*/!* line 29, ../sass/poster.scss *!/*/
-/*.poster-view .hit-box {*/
-  /*fill: none;*/
-  /*visibility: hidden;*/
-  /*pointer-events: all;*/
-  /*stroke: none;*/
-  /*cursor: pointer;*/
-/*}*/
-
-/*/!* line 37, ../sass/poster.scss *!/*/
-/*.poster-view .frame-label {*/
-  /*fill: black;*/
-  /*stroke: none;*/
-/*}*/
-
-/*/!* line 42, ../sass/poster.scss *!/*/
-/*.poster-view .frame-thumbnail {*/
-  /*-webkit-transition: opacity 1s;*/
-/*}*/
-
-/*/!* line 46, ../sass/poster.scss *!/*/
-/*.poster-view .faded-out {*/
-  /*opacity: 0;*/
-/*}*/
-
-/*/!* line 50, ../sass/poster.scss *!/*/
-/*.poster-view .frame-thumbnail .frame-body {*/
-  /*stroke: lightblue;*/
-  /*fill: none;*/
-/*}*/
-
-/*/!* line 55, ../sass/poster.scss *!/*/
-/*.poster-view .frame-thumbnail .link-frame {*/
-  /*stroke: none;*/
-/*}*/
-
-/*/!* line 60, ../sass/poster.scss *!/*/
-/*.poster-view .thumb-outline {*/
-  /*stroke: #788395;*/
-  /*stroke-width: 1;*/
-/*}*/
-
-/*/!* line 65, ../sass/poster.scss *!/*/
-/*.poster-view .thumb-widget {*/
-  /*-webkit-transition: fill 0.01s !important;*/
-/*}*/
-
-/* line 69, ../sass/poster.scss */
-.poster-view .trigger {
-  fill: #d4f7aa;
-  display: none;
+/* line 1, ../sass/poster.scss */
+.poster-view {
+  background-color: #f8f8f8;
+  left: 0;
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 9000;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
-/* line 74, ../sass/poster.scss */
-.poster-view .on-stage .trigger {
-  display: inherit;
+/* line 18, ../sass/poster.scss */
+.intercom-launcher-button {
+  transform: scale(0.6) translate(4px, 19px) !important;
 }
 
-/* line 78, ../sass/poster.scss */
-.poster-view .connector {
-  stroke: green;
-  fill: none;
-  opacity: 0.2;
-  marker-end: url(#marker-triangle);
-}
-
-/* line 86, ../sass/poster.scss */
-.poster-view .trigger-origin {
-  fill: green;
-  stroke: none;
-  display: none;
-  opacity: 0.4;
-}
-
-/* line 100, ../sass/poster.scss */
-.poster-view .on-stage .connector {
-  display: inherit;
-  stroke-linecap: round;
+/* line 23, ../sass/poster.scss */
+.poster-view .timeline-guide {
+  stroke-dasharray: 10, 10;
   stroke-width: 3;
-  opacity: .4;
+  stroke: lightgray;
 }
 
-/* line 106, ../sass/poster.scss */
-.poster-view .on-stage .trigger-origin {
-  display: inherit;
+/* line 29, ../sass/poster.scss */
+.poster-view .hit-box {
+  fill: none;
+  visibility: hidden;
+  pointer-events: all;
+  stroke: none;
   cursor: pointer;
 }
 
-/* line 110, ../sass/poster.scss */
-.poster-view .start-frame .connector {
-  display: none;
+/* line 37, ../sass/poster.scss */
+.poster-view .frame-label {
+  fill: black;
+  stroke: none;
 }
 
-/* line 113, ../sass/poster.scss */
-.poster-view .start-frame .trigger-origin {
-  display: none;
+/* line 42, ../sass/poster.scss */
+.poster-view .frame-thumbnail {
+  -webkit-transition: opacity 1s;
 }
 
-/* line 126, ../sass/poster.scss */
-.poster-view .selector-rectangle {
-  stroke: blue;
-  stroke-width: 2;
+/* line 46, ../sass/poster.scss */
+.poster-view .faded-out {
+  opacity: 0;
+}
+
+/* line 50, ../sass/poster.scss */
+.poster-view .frame-thumbnail .frame-body {
+  stroke: lightblue;
   fill: none;
-  opacity: 0.4;
 }
 
-/* line 133, ../sass/poster.scss */
-.poster-view .selector-outline {
-  stroke: orange;
-  stroke-width: 2;
-  fill: orange;
-  fill-opacity: 0.2;
-  stroke-dasharray: 5 5;
+/* line 55, ../sass/poster.scss */
+.poster-view .frame-thumbnail .link-frame {
+  stroke: none;
 }
+
+/* line 60, ../sass/poster.scss */
+.poster-view .thumb-outline {
+  stroke: #788395;
+  stroke-width: 1;
+}
+
+/* line 65, ../sass/poster.scss */
+.poster-view .thumb-widget {
+  -webkit-transition: fill 0.01s !important;
+}
+
+/* line 69, ../sass/poster.scss */
+/*.poster-view .trigger {*/
+  /*fill: #d4f7aa;*/
+  /*display: none;*/
+/*}*/
+
+/*/!* line 74, ../sass/poster.scss *!/*/
+/*.poster-view .on-stage .trigger {*/
+  /*display: inherit;*/
+/*}*/
+
+/*/!* line 78, ../sass/poster.scss *!/*/
+/*.poster-view .connector {*/
+  /*stroke: green;*/
+  /*fill: none;*/
+  /*opacity: 0.2;*/
+  /*marker-end: url(#marker-triangle);*/
+/*}*/
+
+/*/!* line 86, ../sass/poster.scss *!/*/
+/*.poster-view .trigger-origin {*/
+  /*fill: green;*/
+  /*stroke: none;*/
+  /*display: none;*/
+  /*opacity: 0.4;*/
+/*}*/
+
+/*/!* line 100, ../sass/poster.scss *!/*/
+/*.poster-view .on-stage .connector {*/
+  /*display: inherit;*/
+  /*stroke-linecap: round;*/
+  /*stroke-width: 3;*/
+  /*opacity: .4;*/
+/*}*/
+
+/*/!* line 106, ../sass/poster.scss *!/*/
+/*.poster-view .on-stage .trigger-origin {*/
+  /*display: inherit;*/
+  /*cursor: pointer;*/
+/*}*/
+
+/*/!* line 110, ../sass/poster.scss *!/*/
+/*.poster-view .start-frame .connector {*/
+  /*display: none;*/
+/*}*/
+
+/*/!* line 113, ../sass/poster.scss *!/*/
+/*.poster-view .start-frame .trigger-origin {*/
+  /*display: none;*/
+/*}*/
+
+/*/!* line 126, ../sass/poster.scss *!/*/
+/*.poster-view .selector-rectangle {*/
+  /*stroke: blue;*/
+  /*stroke-width: 2;*/
+  /*fill: none;*/
+  /*opacity: 0.4;*/
+/*}*/
+
+/*/!* line 133, ../sass/poster.scss *!/*/
+/*.poster-view .selector-outline {*/
+  /*stroke: orange;*/
+  /*stroke-width: 2;*/
+  /*fill: orange;*/
+  /*fill-opacity: 0.2;*/
+  /*stroke-dasharray: 5 5;*/
+/*}*/
 
 /* line 142, ../sass/poster.scss */
 .poster-view .on-stage .selector-outline {
