@@ -7,6 +7,10 @@ hbs.registerPartials(__dirname + '/views/partials');
 app.get('/', function (req, res) {
     res.render('index.hbs');
 });
+app.get('/simple', function (req, res) {
+    res.render('simple.hbs');
+});
+
 
 
 console.log('starting server...');

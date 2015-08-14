@@ -32,27 +32,27 @@ var frameThumbnails = document.getElementById('frame-thumbnails');
 
 buildFrameHolders();
 
-var i = 0;
+var updateIndex = 0;
 var intervalId = setInterval(function () {
     console.log ('updating ' + framesInStory + ' frames');
     //update all the frames by clearing and setting them...
-    for (var j=0;j<framesInStory;j++){
+    for (var frameIndex=0;frameIndex<framesInStory;frameIndex++){
         var startTime = Date.now();
-        clearFrame(j);
+        clearFrame(frameIndex);
         var endTime = Date.now();
         accumulated += endTime - startTime;
-        setFrame(j);
+        setFrame(frameIndex);
     }
-    i++;
+    updateIndex++;
 
 
-    if (i % sampleEvery === 0) {
-        console.log('update cycle', i, ': ',accumulated / sampleEvery / framesInStory, 'ms per frame');
+    if (updateIndex % sampleEvery === 0) {
+        console.log('update cycle', updateIndex, ': ',accumulated / sampleEvery / framesInStory, 'ms per frame');
         samples.push(accumulated / sampleEvery);
         accumulated = 0;
     }
     console.log ('FINISHED updating ' + framesInStory + ' frames');
-    if (i >= numberOfUpdates) {
+    if (updateIndex >= numberOfUpdates) {
         console.log('DONE!');
         console.log(samples);
         clearInterval(intervalId);
@@ -74,15 +74,15 @@ function generateDeviceNode(shuffleClipPaths){
     return document.importNode(frameTemplate.content,true).querySelector('.widget-device');
 }
 
-function setFrame(j){
-    var frame=document.getElementById('frame-'+j);
+function setFrame(i){
+    var frame=document.getElementById('frame-'+i);
     if (!frame)return;
     var deviceNode = generateDeviceNode(true);
     var contentNode = frame.querySelector('.frame-thumbnail > .frame-body > .content');
     contentNode.appendChild(deviceNode);
 }
-function clearFrame(j) {
-    var frame=document.getElementById('frame-'+j);
+function clearFrame(i) {
+    var frame=document.getElementById('frame-'+i);
     if (!frame)return;
     var device = frame.querySelector('.frame-thumbnail > .frame-body > .content > *');
     if (!device) return;
