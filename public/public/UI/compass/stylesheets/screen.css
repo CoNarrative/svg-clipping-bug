@@ -105,38 +105,38 @@
   /*opacity: .4;*/
 /*}*/
 
-/*/!* line 106, ../sass/poster.scss *!/*/
-/*.poster-view .on-stage .trigger-origin {*/
-  /*display: inherit;*/
-  /*cursor: pointer;*/
-/*}*/
+/* line 106, ../sass/poster.scss */
+.poster-view .on-stage .trigger-origin {
+  display: inherit;
+  cursor: pointer;
+}
 
-/*/!* line 110, ../sass/poster.scss *!/*/
-/*.poster-view .start-frame .connector {*/
-  /*display: none;*/
-/*}*/
+/* line 110, ../sass/poster.scss */
+.poster-view .start-frame .connector {
+  display: none;
+}
 
-/*/!* line 113, ../sass/poster.scss *!/*/
-/*.poster-view .start-frame .trigger-origin {*/
-  /*display: none;*/
-/*}*/
+/* line 113, ../sass/poster.scss */
+.poster-view .start-frame .trigger-origin {
+  display: none;
+}
 
-/*/!* line 126, ../sass/poster.scss *!/*/
-/*.poster-view .selector-rectangle {*/
-  /*stroke: blue;*/
-  /*stroke-width: 2;*/
-  /*fill: none;*/
-  /*opacity: 0.4;*/
-/*}*/
+/* line 126, ../sass/poster.scss */
+.poster-view .selector-rectangle {
+  stroke: blue;
+  stroke-width: 2;
+  fill: none;
+  opacity: 0.4;
+}
 
-/*/!* line 133, ../sass/poster.scss *!/*/
-/*.poster-view .selector-outline {*/
-  /*stroke: orange;*/
-  /*stroke-width: 2;*/
-  /*fill: orange;*/
-  /*fill-opacity: 0.2;*/
-  /*stroke-dasharray: 5 5;*/
-/*}*/
+/* line 133, ../sass/poster.scss */
+.poster-view .selector-outline {
+  stroke: orange;
+  stroke-width: 2;
+  fill: orange;
+  fill-opacity: 0.2;
+  stroke-dasharray: 5 5;
+}
 
 /* line 142, ../sass/poster.scss */
 .poster-view .on-stage .selector-outline {
