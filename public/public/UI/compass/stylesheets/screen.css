@@ -138,144 +138,144 @@
   /*stroke-dasharray: 5 5;*/
 /*}*/
 
-/*/!* line 142, ../sass/poster.scss *!/*/
-/*.poster-view .on-stage .selector-outline {*/
-  /*display: inherit;*/
-/*}*/
+/* line 142, ../sass/poster.scss */
+.poster-view .on-stage .selector-outline {
+  display: inherit;
+}
 
-/*/!* line 146, ../sass/poster.scss *!/*/
-/*.poster-view .selected .selector-outline {*/
-  /*display: inherit;*/
-  /*stroke: lightblue;*/
-  /*stroke-width: 4;*/
-/*}*/
+/* line 146, ../sass/poster.scss */
+.poster-view .selected .selector-outline {
+  display: inherit;
+  stroke: lightblue;
+  stroke-width: 4;
+}
 
-/*/!* line 152, ../sass/poster.scss *!/*/
-/*.poster-view .flow-outline {*/
-  /*stroke: black;*/
-  /*fill: rgba(30, 30, 30, 0.7);*/
-/*}*/
+/* line 152, ../sass/poster.scss */
+.poster-view .flow-outline {
+  stroke: black;
+  fill: rgba(30, 30, 30, 0.7);
+}
 
-/*/!* Always keep flows on now *!/*/
-/*/!* line 167, ../sass/poster.scss *!/*/
-/*.poster-view .flow-title {*/
-  /*font-size: 8px;*/
-  /*fill: white;*/
-  /*pointer-events: none;*/
-  /*-webkit-user-select: none;*/
-  /*-moz-user-select: none;*/
-  /*-ms-user-select: none;*/
-  /*user-select: none;*/
-  /*user-select: none;*/
-/*}*/
+/* Always keep flows on now */
+/* line 167, ../sass/poster.scss */
+.poster-view .flow-title {
+  font-size: 8px;
+  fill: white;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  user-select: none;
+}
 
-/*/!* line 178, ../sass/poster.scss *!/*/
-/*.poster-view .flow-expander line {*/
-  /*stroke: white;*/
-  /*fill: none;*/
-  /*pointer-events: none;*/
-/*}*/
+/* line 178, ../sass/poster.scss */
+.poster-view .flow-expander line {
+  stroke: white;
+  fill: none;
+  pointer-events: none;
+}
 
-/*/!* line 183, ../sass/poster.scss *!/*/
-/*.poster-view .flow-expander line.vert {*/
-  /*display: none;*/
-/*}*/
+/* line 183, ../sass/poster.scss */
+.poster-view .flow-expander line.vert {
+  display: none;
+}
 
-/*/!* line 186, ../sass/poster.scss *!/*/
-/*.poster-view .flow.collapsed .flow-expander line.vert {*/
-  /*display: inherit;*/
-/*}*/
+/* line 186, ../sass/poster.scss */
+.poster-view .flow.collapsed .flow-expander line.vert {
+  display: inherit;
+}
 
-/*/!* line 189, ../sass/poster.scss *!/*/
-/*.poster-view .flow.collapsed .flow-expander line {*/
-  /*stroke: #f6e312;*/
-/*}*/
+/* line 189, ../sass/poster.scss */
+.poster-view .flow.collapsed .flow-expander line {
+  stroke: #f6e312;
+}
 
-/*/!* line 192, ../sass/poster.scss *!/*/
-/*.poster-view .frame-thumbnail.collapsed .content,*/
-/*.poster-view .frame-thumbnail.collapsed .annotation-placeholder-text,*/
-/*.poster-view .frame-thumbnail.collapsed .frame-outline,*/
-/*.poster-view .frame-thumbnail.collapsed .frame-annotation,*/
-/*.poster-view .frame-thumbnail.collapsed .link-text,*/
-/*.poster-view .frame-thumbnail.collapsed:not(.first-in-series) .action-trigger-text,*/
-/*.poster-view .frame-thumbnail.collapsed:not(.first-in-series) .connector,*/
-/*.poster-view .frame-thumbnail.collapsed:not(.first-in-series) .trigger-origin {*/
-  /*opacity: 0 !important;*/
-  /*-webkit-transition: opacity .3s;*/
-/*}*/
+/* line 192, ../sass/poster.scss */
+.poster-view .frame-thumbnail.collapsed .content,
+.poster-view .frame-thumbnail.collapsed .annotation-placeholder-text,
+.poster-view .frame-thumbnail.collapsed .frame-outline,
+.poster-view .frame-thumbnail.collapsed .frame-annotation,
+.poster-view .frame-thumbnail.collapsed .link-text,
+.poster-view .frame-thumbnail.collapsed:not(.first-in-series) .action-trigger-text,
+.poster-view .frame-thumbnail.collapsed:not(.first-in-series) .connector,
+.poster-view .frame-thumbnail.collapsed:not(.first-in-series) .trigger-origin {
+  opacity: 0 !important;
+  -webkit-transition: opacity .3s;
+}
 
-/*/!* line 205, ../sass/poster.scss *!/*/
-/*.poster-view .frame-thumbnail.filtered-out .content,*/
-/*.poster-view .frame-thumbnail.filtered-out .annotation-placeholder-text,*/
-/*.poster-view .frame-thumbnail.filtered-out .frame-outline,*/
-/*.poster-view .frame-thumbnail.filtered-out .frame-annotation,*/
-/*.poster-view .frame-thumbnail.filtered-out .link-text,*/
-/*.poster-view .frame-thumbnail.filtered-out:not(.first-in-series) .action-trigger-text,*/
-/*.poster-view .frame-thumbnail.filtered-out:not(.first-in-series) .connector,*/
-/*.poster-view .frame-thumbnail.filtered-out:not(.first-in-series) .trigger-origin {*/
-  /*opacity: 0 !important;*/
-  /*-webkit-transition: opacity .3s;*/
-/*}*/
+/* line 205, ../sass/poster.scss */
+.poster-view .frame-thumbnail.filtered-out .content,
+.poster-view .frame-thumbnail.filtered-out .annotation-placeholder-text,
+.poster-view .frame-thumbnail.filtered-out .frame-outline,
+.poster-view .frame-thumbnail.filtered-out .frame-annotation,
+.poster-view .frame-thumbnail.filtered-out .link-text,
+.poster-view .frame-thumbnail.filtered-out:not(.first-in-series) .action-trigger-text,
+.poster-view .frame-thumbnail.filtered-out:not(.first-in-series) .connector,
+.poster-view .frame-thumbnail.filtered-out:not(.first-in-series) .trigger-origin {
+  opacity: 0 !important;
+  -webkit-transition: opacity .3s;
+}
 
-/*/!* line 217, ../sass/poster.scss *!/*/
-/*.poster-view .frame-thumbnail.filtered-out .thumb-outline {*/
-  /*stroke-dasharray: 20 5;*/
-  /*opacity: 0.3;*/
-  /*-webkit-transition: opacity .3s;*/
-/*}*/
+/* line 217, ../sass/poster.scss */
+.poster-view .frame-thumbnail.filtered-out .thumb-outline {
+  stroke-dasharray: 20 5;
+  opacity: 0.3;
+  -webkit-transition: opacity .3s;
+}
 
-/*/!* line 223, ../sass/poster.scss *!/*/
-/*.poster-view .flow.filtered-out {*/
-  /*opacity: 0.05 !important;*/
-/*}*/
+/* line 223, ../sass/poster.scss */
+.poster-view .flow.filtered-out {
+  opacity: 0.05 !important;
+}
 
-/*/!* line 229, ../sass/poster.scss *!/*/
-/*.poster-view .flow.single-frame .flow-expander,*/
-/*.poster-view .flow.single-frame .flow-expander-hitbox {*/
-  /*display: none;*/
-  /*pointer-events: none;*/
-/*}*/
+/* line 229, ../sass/poster.scss */
+.poster-view .flow.single-frame .flow-expander,
+.poster-view .flow.single-frame .flow-expander-hitbox {
+  display: none;
+  pointer-events: none;
+}
 
-/*/!* line 234, ../sass/poster.scss *!/*/
-/*.poster-view .flow-expander-hitbox {*/
-  /*visibility: hidden;*/
-  /*pointer-events: all;*/
-  /*cursor: pointer;*/
-/*}*/
+/* line 234, ../sass/poster.scss */
+.poster-view .flow-expander-hitbox {
+  visibility: hidden;
+  pointer-events: all;
+  cursor: pointer;
+}
 
-/*/!* line 239, ../sass/poster.scss *!/*/
-/*.poster-view .flow-title-hitbox {*/
-  /*visibility: hidden;*/
-  /*pointer-events: all;*/
-  /*cursor: text;*/
-/*}*/
+/* line 239, ../sass/poster.scss */
+.poster-view .flow-title-hitbox {
+  visibility: hidden;
+  pointer-events: all;
+  cursor: text;
+}
 
-/*/!* line 246, ../sass/poster.scss *!/*/
-/*.poster-view .flow-title-editor input {*/
-  /*width: 100%;*/
-  /*background-color: #464646;*/
-  /*color: white;*/
-  /*border-radius: 12px;*/
-/*}*/
+/* line 246, ../sass/poster.scss */
+.poster-view .flow-title-editor input {
+  width: 100%;
+  background-color: #464646;
+  color: white;
+  border-radius: 12px;
+}
 
-/*/!* line 252, ../sass/poster.scss *!/*/
-/*.poster-view .link-editor textarea {*/
-  /*height: 100%;*/
-  /*width: 100%;*/
-  /*border: none;*/
-  /*resize: none;*/
-  /*font-size: 6px;*/
-/*}*/
+/* line 252, ../sass/poster.scss */
+.poster-view .link-editor textarea {
+  height: 100%;
+  width: 100%;
+  border: none;
+  resize: none;
+  font-size: 6px;
+}
 
-/*/!* line 259, ../sass/poster.scss *!/*/
-/*.poster-arrange-holder {*/
-  /*display: -webkit-flex;*/
-  /*display: flex;*/
-  /*position: absolute;*/
-  /*z-index: 9000;*/
-  /*bottom: 15px;*/
-  /*right: 4px;*/
-/*}*/
+/* line 259, ../sass/poster.scss */
+.poster-arrange-holder {
+  display: -webkit-flex;
+  display: flex;
+  position: absolute;
+  z-index: 9000;
+  bottom: 15px;
+  right: 4px;
+}
 
 /* line 268, ../sass/poster.scss */
 ol.poster-arrange-holder, ul.poster-arrange-holder {
