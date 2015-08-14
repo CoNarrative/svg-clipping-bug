@@ -1,5 +1,5 @@
-var numberOfUpdates = 30;
-var sampleEvery = 3;
+var numberOfUpdates = 10;
+var sampleEvery = 1;
 var accumulated = 0;
 var samples = [];
 var removeClipping = false;
