@@ -70,10 +70,6 @@
   -webkit-transition: fill 0.01s !important;
 }
 
-
-
-
-/*****************************************************/
 /* line 69, ../sass/poster.scss */
 .poster-view .trigger {
    fill: #d4f7aa;
@@ -90,12 +86,8 @@
   stroke: green;
   fill: none;
   opacity: 0.2;
-  /*marker-end: url(#marker-triangle);*/
+  marker-end: url(#marker-triangle);
 }
-/*****************************************************/
-
-
-
 
 /* line 86, ../sass/poster.scss */
 .poster-view .trigger-origin {
