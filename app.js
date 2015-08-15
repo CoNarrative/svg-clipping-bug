@@ -10,9 +10,6 @@ app.get('/', function (req, res) {
 app.get('/simple', function (req, res) {
     res.render('simple.hbs');
 });
-app.get('/pure',function(req,res){
-    res.render('puretest.hbs');
-})
 
 
 
