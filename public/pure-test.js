@@ -27,8 +27,9 @@ var intervalId = setInterval(function () {
     }
     updateIndex++;
     if (updateIndex % sampleEvery === 0) {
-        console.log('update cycle', updateIndex, ': ', accumulated / sampleEvery / numberOfDrawings, 'ms per drawing');
-        samples.push(accumulated / sampleEvery);
+        var avg = accumulated / sampleEvery / numberOfDrawings;
+        console.log('update cycle', updateIndex, ': ', avg, 'ms per drawing');
+        samples.push(avg);
         accumulated = 0;
     }
     console.log('FINISHED updating ' + numberOfDrawings + ' drawings');
