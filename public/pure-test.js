@@ -1,8 +1,8 @@
 var svgNs = 'http://www.w3.org/2000/svg';
-
+var pulseDelay=500;
 var numberOfDrawings = 20;
 var numberOfClippedShapesInEach = 100;
-var numberOfUpdates = 5;
+var numberOfUpdates = 15;
 var sampleEvery = 1;
 var accumulated = 0;
 var samples = [];
@@ -35,7 +35,7 @@ var intervalId = setInterval(function () {
         console.log(samples);
         clearInterval(intervalId);
     }
-}, 2000);
+}, pulseDelay);
 
 function removeDrawing(id) {
     var drawing = document.getElementById('drawing-' + id);
@@ -79,10 +79,10 @@ function generateClippedPair() {
     /* Make a clipPath with a rectangle shape */
 
     var clipBox = document.createElementNS(svgNs, 'rect');
-    clipBox.setAttribute('id', cpId);
     clipBox.setAttribute('width', 100);
     clipBox.setAttribute('height', 100);
     var clipPath = document.createElementNS(svgNs, 'clipPath');
+    clipPath.setAttribute('id', cpId);
     clipPath.appendChild(clipBox);
 
     var clippedPair = document.createElementNS(svgNs, 'g');
