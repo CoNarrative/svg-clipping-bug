@@ -42,9 +42,12 @@ function removeDrawing(id) {
     if (drawing) drawing.remove();
 }
 
-function addDrawing(id) {
+function addDrawing(idx) {
     var drawing = generateDrawing();
-    drawing.setAttribute('id', 'drawing-' + id);
+    drawing.setAttribute('id', 'drawing-' + idx);
+    var x = 90* (idx % 10);
+    var y = 90*Math.floor(idx/10);
+    drawing.setAttribute('transform','translate('+x+','+y+') scale(0.2) ');
     svgNode.appendChild(drawing);
 }
 
@@ -56,7 +59,6 @@ function generateDrawing(id) {
         var y = Math.floor(Math.random()*500);
         clippedShape.setAttribute('transform','translate('+x+','+y+')');
         drawing.appendChild(clippedShape);
-
     }
     return drawing;
 }
