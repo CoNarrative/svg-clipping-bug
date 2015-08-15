@@ -1,19 +1,21 @@
-var svgNs = 'http://www.w3.org/2000/svg';
 var pulseDelay=500;
 var numberOfDrawings = 20;
 var numberOfClippedShapesInEach = 100;
 var numberOfUpdates = 15;
 var sampleEvery = 1;
+var inDivs = true;
+
+var svgNs = 'http://www.w3.org/2000/svg';
+var svgNode = document.querySelector('g.drawings');
 var accumulated = 0;
 var samples = [];
-
-var svgNode = document.querySelector('g.drawings');
+var addNewDrawing = inDivs?addDrawingAsDiv:addDrawing;
 
 //BEGIN TESTING
 var updateIndex = 0;
 var intervalId = setInterval(function () {
     console.log('\n');
-    console.log('updating ' + numberOfDrawings + ' drawings');
+    console.log('Cycle',updateIndex,'- updating ' + numberOfDrawings + ' drawings');
     //update all the frames by clearing and setting them...
     for (var frameIndex = 0; frameIndex < numberOfDrawings; frameIndex++) {
         var startTime = Date.now();
@@ -21,15 +23,15 @@ var intervalId = setInterval(function () {
         removeDrawing(frameIndex);
         var endTime = Date.now();
         accumulated += endTime - startTime;
-        addDrawing(frameIndex);
+        addNewDrawing(frameIndex);
     }
     updateIndex++;
     if (updateIndex % sampleEvery === 0) {
-        console.log('update cycle', updateIndex, ': ', accumulated / sampleEvery / numberOfDrawings, 'ms per frame');
+        console.log('update cycle', updateIndex, ': ', accumulated / sampleEvery / numberOfDrawings, 'ms per drawing');
         samples.push(accumulated / sampleEvery);
         accumulated = 0;
     }
-    console.log('FINISHED updating ' + numberOfDrawings + ' frames');
+    console.log('FINISHED updating ' + numberOfDrawings + ' drawings');
     if (updateIndex >= numberOfUpdates) {
         console.log('DONE!');
         console.log(samples);
@@ -50,6 +52,24 @@ function addDrawing(idx) {
     var y = dim * Math.floor(idx/8);
     drawing.setAttribute('transform','translate('+x+','+y+') scale(0.2) ');
     svgNode.appendChild(drawing);
+}
+
+var drawingsInDivs = document.querySelector('.drawings-in-divs');
+function addDrawingAsDiv(idx){
+    var drawing = generateDrawing();
+    drawing.setAttribute('transform','scale(0.18)');
+
+    var holder = document.createElement('div');
+    holder.setAttribute('id', 'drawing-' + idx);
+    var dim = 120;
+    var x = dim * (idx % 8);
+    var y = dim * Math.floor(idx/8);
+    holder.innerHTML='<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="height:100%; width:100%; fill:none; stroke:black;">';
+    holder.className='drawing-holder';
+    holder.style.left=x;
+    holder.style.top=y;
+    holder.querySelector('svg').appendChild(drawing);
+    drawingsInDivs.appendChild(holder);
 }
 
 function generateDrawing(id) {

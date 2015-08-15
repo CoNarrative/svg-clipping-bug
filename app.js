@@ -11,8 +11,6 @@ app.get('/simple', function (req, res) {
     res.render('simple.hbs');
 });
 
-
-
 console.log('starting server...');
 var server = app.listen(3000, function () {
     var host = server.address().address;
