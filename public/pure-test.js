@@ -45,8 +45,9 @@ function removeDrawing(id) {
 function addDrawing(idx) {
     var drawing = generateDrawing();
     drawing.setAttribute('id', 'drawing-' + idx);
-    var x = 90* (idx % 10);
-    var y = 90*Math.floor(idx/10);
+    var dim = 120;
+    var x = dim * (idx % 8);
+    var y = dim * Math.floor(idx/8);
     drawing.setAttribute('transform','translate('+x+','+y+') scale(0.2) ');
     svgNode.appendChild(drawing);
 }
